@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../Model/Classes"
+      name = "Classes">
+      <Group
+         location = "group:Basket"
+         name = "Basket">
+         <FileRef
+            location = "group:IBasketAPIService.swift">
+         </FileRef>
+         <Group
+            location = "group:Entities"
+            name = "Entities">
+            <FileRef
+               location = "group:IBasketItemStock.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IBasket.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IBasketProductPrice.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IBasketItem.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IBasketProductCatchWeightList.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IBasketProductItem.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Product"
+         name = "Product">
+         <FileRef
+            location = "group:IProductDetailsAPIService.swift">
+         </FileRef>
+         <Group
+            location = "group:Entities"
+            name = "Entities">
+            <FileRef
+               location = "group:IProductDeliveryOption.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductPromotion.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductDetailsResource.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductDetails.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductCategory.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductPrice.swift">
+            </FileRef>
+            <FileRef
+               location = "group:IProductContent.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Delivery"
+         name = "Delivery">
+         <FileRef
+            location = "group:IDeliveryAPIService.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ICheckoutContextService.swift">
+         </FileRef>
+         <FileRef
+            location = "group:CheckoutContextNotification.swift">
+         </FileRef>
+         <Group
+            location = "group:Entities"
+            name = "Entities">
+            <FileRef
+               location = "group:IDeliveryType.swift">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
