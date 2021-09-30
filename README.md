@@ -14,7 +14,6 @@ Follow this guideline
 Feature/ISSUE_ID - ScreenName - Add models
 Bugfix/ISSUE_ID - ScreenName - Fix bug xxx
 ```
-- Prefer UpperCamelCase
 
 ## Pull Request
 Follow this guideline
@@ -23,4 +22,6 @@ Follow this guideline
 Feature/ISSUE_ID - ScreenName - Short issue title
 Bugfix/ISSUE_ID - ScreenName - Short issue title
 ```
+
+### NOTE
 - Prefer UpperCamelCase
