@@ -1,5 +1,8 @@
 # Movie-App-Training
 
+# Design
+https://www.figma.com/file/2tXCd2NTjLvj2vs7esQdL8/Netflix-Clone-UI-Design-(Community)?node-id=1%3A15
+
 # Branching
 |type|usage|
 |--|--|
