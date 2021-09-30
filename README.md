@@ -20,7 +20,7 @@ Bugfix/ISSUE_ID - ScreenName - Fix bug xxx
 
 ## Pull Request
 Follow this guideline
-
+> :warning: You have to link ISSUE to your PR
 ```
 Feature/ISSUE_ID - ScreenName - Short issue title
 Bugfix/ISSUE_ID - ScreenName - Short issue title
