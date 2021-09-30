@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 pipeline {
-  agent { 
+  agent {
     label 'slave-macos'
   }
 
@@ -30,7 +30,7 @@ pipeline {
     }
     stage("Danger") {
       steps { 
-		withCredentials([string(credentialsId: 'GITHUB_PERSONAL_TOKEN', variable: 'GITHUB_PERSONAL_TOKEN')]
+		withCredentials([string(credentialsId: 'GITHUB_PERSONAL_TOKEN', variable: 'GITHUB_PERSONAL_TOKEN')])
 		{
 		  sh """
 		  export DANGER_GITHUB_API_TOKEN="${GITHUB_PERSONAL_TOKEN}"
