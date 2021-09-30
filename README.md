@@ -11,7 +11,16 @@
 Follow this guideline
 
 ```
-/feature/ISSUE_ID - Home - Add models
-/bugfix/ISSUE_ID - Home - Fix bug xxx
+Feature/ISSUE_ID - ScreenName - Add models
+Bugfix/ISSUE_ID - ScreenName - Fix bug xxx
+```
+- Prefer UpperCamelCase
+
+## Pull Request
+Follow this guideline
+
+```
+Feature/ISSUE_ID - ScreenName - Short issue title
+Bugfix/ISSUE_ID - ScreenName - Short issue title
 ```
 - Prefer UpperCamelCase
