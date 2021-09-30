@@ -25,3 +25,6 @@ Bugfix/ISSUE_ID - ScreenName - Short issue title
 
 ### NOTE
 - Prefer UpperCamelCase
+- Using proxyman to mock API: https://proxyman.io/
+- Self-review code and build project before create PR
+- Follow coding convention by SwiftLint: https://github.com/realm/SwiftLint 
