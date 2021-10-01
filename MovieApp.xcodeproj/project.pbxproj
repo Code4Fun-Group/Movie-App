@@ -1000,7 +1000,7 @@
 				CBEAB30826FA1BBE00BD82C6 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Development;
 		};
 		CBEAB30C26FA1BBE00BD82C6 /* Build configuration list for PBXNativeTarget "MovieAppTests" */ = {
 			isa = XCConfigurationList;
@@ -1010,7 +1010,7 @@
 				CBEAB30E26FA1BBE00BD82C6 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Development;
 		};
 		CBEAB30F26FA1BBE00BD82C6 /* Build configuration list for PBXNativeTarget "MovieAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -1020,7 +1020,7 @@
 				CBEAB31126FA1BBE00BD82C6 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Development;
 		};
 		CBEAB33226FB9BAC00BD82C6 /* Build configuration list for PBXNativeTarget "MovieApp" */ = {
 			isa = XCConfigurationList;
@@ -1030,7 +1030,7 @@
 				CBEAB33426FB9BAC00BD82C6 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Development;
 		};
 /* End XCConfigurationList section */
 	};

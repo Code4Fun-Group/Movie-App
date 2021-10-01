@@ -5,7 +5,6 @@
 # App
 ##################
 workspace "MovieApp"
-platform :ios, '13.0'
 
 ##################
 # Global
