@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0"
   spec.summary      = "Model Framework"
   spec.description  = <<-DESC
-  Common Model
+	Model
 DESC
 
   spec.homepage     = "https://www.code4fun.group"

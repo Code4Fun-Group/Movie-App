@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0"
   spec.summary      = "Common Framework"
   spec.description  = <<-DESC
-  Tesco Common	
+	Common	
 DESC
 
   spec.homepage     = "https://www.code4fun.group"
