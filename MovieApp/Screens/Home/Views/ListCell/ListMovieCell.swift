@@ -9,6 +9,7 @@ import UIKit
 
 class ListMovieCell: UITableViewCell {
 	
+        // MARK: - Outlets
 	@IBOutlet private weak var imageListMovieCell: UIImageView!
 	override func awakeFromNib() {
 		super.awakeFromNib()
