@@ -8,17 +8,12 @@
 import UIKit
 
 class ListMovieCell: UITableViewCell {
-	
-        // MARK: - Outlets
+	// MARK: - Outlets
+
 	@IBOutlet private weak var imageListMovieCell: UIImageView!
+	// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
 	}
-	
-	override func setSelected(_ selected: Bool, animated: Bool) {
-		super.setSelected(selected, animated: animated)
-		// Configure the view for the selected state
-	}
-	
 }

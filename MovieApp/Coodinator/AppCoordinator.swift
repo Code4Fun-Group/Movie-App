@@ -44,6 +44,7 @@ class AppCoordinator: CoordinatorProtocol {
 
 		navigationController?.isNavigationBarHidden = true
 	}
+
 	func comingViewController() {
 		let view = ComingSoonViewController.fromStoryboard()
 		view.coordinator = self
@@ -51,6 +52,7 @@ class AppCoordinator: CoordinatorProtocol {
 
 		navigationController?.isNavigationBarHidden = true
 	}
+	
 	func downloadViewController() {
 		let view = DownloadViewController.fromStoryboard()
 		self.navigationController?.pushViewController(view, animated: true)

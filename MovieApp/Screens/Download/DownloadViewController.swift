@@ -8,7 +8,7 @@
 import UIKit
 
 class DownloadViewController: BaseViewController {
-	
+	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = .black

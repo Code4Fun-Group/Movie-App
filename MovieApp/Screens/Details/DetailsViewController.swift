@@ -8,5 +8,8 @@
 import UIKit
 
 class DetailsViewController: UIViewController, Storyboarded {
-
+	// MARK: - Life cycles
+	override func viewDidLoad() {
+	super.viewDidLoad()
+	}
 }

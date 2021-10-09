@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchViewController: BaseViewController {
-	
+	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.view.backgroundColor = .red

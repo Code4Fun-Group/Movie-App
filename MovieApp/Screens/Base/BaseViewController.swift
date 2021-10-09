@@ -8,6 +8,6 @@
 import UIKit
 
 class BaseViewController: UIViewController, Storyboarded, Coordinator {
-
+	// MARK: - Variables
 	var coordinator: CoordinatorProtocol?
 	}

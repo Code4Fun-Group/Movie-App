@@ -6,13 +6,14 @@
 //
 
 import Foundation
+
 protocol IMoreViewModel {
 	func getMovies()
 }
+
 class MoreViewModel {
 
 }
-
 // MARK: - IMoreViewModel
 extension MoreViewModel: IMoreViewModel {
 	func getMovies() {

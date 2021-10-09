@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 enum GlobalConstants {
 	static let homeMovies = "Home"

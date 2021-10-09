@@ -6,8 +6,9 @@
 //
 
 import UIKit
-// MARK: - Outlets
+
 class HomeMovieCell: UITableViewCell {
+	// MARK: - IOutlets
 	@IBOutlet private weak var logo: UIImageView!
 	@IBOutlet private weak var tvShowButton: UIButton!
 	@IBOutlet private weak var movieButton: UIButton!
@@ -20,6 +21,7 @@ class HomeMovieCell: UITableViewCell {
 	
 	// MARK: - Variables
 	private var viewModel: IMovieViewModel!
+	// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		self.backgroundView = UIImageView(image: UIImage(named: "image2"))
