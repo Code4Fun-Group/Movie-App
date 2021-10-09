@@ -9,13 +9,14 @@ import UIKit
 import Model
 
 protocol IHomeViewModel {
-	func getMovies()
-}
-
-class HomeViewModel {
-	weak var viewController: IHomeViewController?
-	var movieViewModels: [IMovieViewModel] = []
+	func getListMovies()
 	
+}
+class HomeViewModel {
+
+	weak var viewController: IHomeViewController?
+	var movieViewModels = [IMovieViewModel]()
+
 	init(viewController: IHomeViewController) {
 		self.viewController = viewController
 	}
@@ -23,7 +24,7 @@ class HomeViewModel {
 
 // MARK: - IHomeViewModel
 extension HomeViewModel: IHomeViewModel {
-	func getMovies() {
+	func getListMovies() {
 		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
 			guard let self = self else { return }
 			switch result {
@@ -37,4 +38,5 @@ extension HomeViewModel: IHomeViewModel {
 			}
 		}
 	}
+	
 }

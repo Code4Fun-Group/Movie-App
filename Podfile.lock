@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.4)
   - Common (1.0)
   - Model (1.0):
     - Common
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
     :path: "./Modules/Networking"
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Common: 2be04419239ac4b7d7cc39e3372f30ead2cda73b
   Model: 7f3e5e23177077809e32d5f4f061ee2824ccddfe
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
@@ -41,4 +41,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7fd84f34bdb940ab4c6c28ea5e9654ec4ba96a83
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1
