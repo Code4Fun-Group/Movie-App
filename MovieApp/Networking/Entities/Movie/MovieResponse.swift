@@ -7,23 +7,40 @@
 
 import Model
 
-// swiftlint:disable identifier_name
 struct MovieResponse: Codable {
 	var adult: Bool?
-	var backdrop_path: String?
-	var genre_ids: [Int]?
+	var backdropPath: String?
+	var genreIds: [Int]?
 	var id: Int?
-	var media_type: String?
-	var original_language: String?
-	var original_title: String?
+	var mediaType: String?
+	var originalLanguage: String?
+	var originalTitle: String?
 	var overview: String?
 	var popularity: Int?
-	var poster_path: String?
-	var release_date: String?
+	var posterPath: String?
+	var releaseDate: String?
 	var title: String?
 	var video: Bool?
-	var vote_average: Double?
-	var vote_count: Int?
+	var voteAverage: Double?
+	var voteCount: Int?
+	
+	enum CodingKeys: String, CodingKey {
+		case adult = "adult"
+		case backdropPath = "backdrop_path"
+		case genreIds = "genre_ids"
+		case id = "id"
+		case mediaType = "media_type"
+		case originalLanguage = "original_language"
+		case originalTitle = "original_title"
+		case overview = "overview"
+		case popularity = "popularity"
+		case posterPath = "poster_path"
+		case releaseDate = "release_date"
+		case title = "title"
+		case video = "video"
+		case voteAverage = "vote_average"
+		case voteCount = "vote_count"
+	}
 }
 
 extension MovieModel {
