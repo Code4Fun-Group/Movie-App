@@ -22,7 +22,7 @@ extension MovieAppResourceResponseAdapter: INetworkErrorResponseHandler {
 												 status: serverError.status)
 				completion(error)
 			case .failure:
-				let error = NetworkResponseError(message: "Unknown",
+				let error = NetworkResponseError(message: "NetUnknown",
 												 name: "Unknown",
 												 status: nil)
 				completion(error)
