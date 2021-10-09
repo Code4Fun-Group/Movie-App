@@ -9,7 +9,4 @@ import UIKit
 
 class MoreViewController: BaseViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
 }
