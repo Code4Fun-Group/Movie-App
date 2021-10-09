@@ -37,7 +37,7 @@ extension MovieAppResourceResponseAdapter: IMovieResourceResponseAdataper {
 			switch response {
 			case .success(let resources):
 				let movies = resources.compactMap({
-					MovieModel(item: $0)
+					MovieModel(movies: $0)
 				})
 				completion(.success(movies))
 			case .failure(let error):

@@ -20,7 +20,6 @@ struct MovieAppResourceQueryAdapter {
 extension MovieAppResourceQueryAdapter: IMovieResourceQueryAdapter {
 	func getMovies() -> URLRequest {
 		let url = config.endpoint.appendingPathComponent("movies")
-
 		var request = URLRequest(url: url)
 		request.httpMethod = "GET"
 		return request
