@@ -13,13 +13,9 @@ class TvShowViewCell: UITableViewCell {
 	@IBOutlet private weak var imageTvShow: UIImageView!
 	@IBOutlet private weak var playTvShowButton: UIButton!
 	@IBOutlet private weak var myListTvShowButton: UIButton!
+	// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
-	}
-	
-	override func setSelected(_ selected: Bool, animated: Bool) {
-		super.setSelected(selected, animated: animated)
-		// Configure the view for the selected state
 	}
 }

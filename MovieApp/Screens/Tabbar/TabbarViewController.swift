@@ -8,14 +8,14 @@
 import UIKit
 
 class TabbarViewController: UITabBarController, Storyboarded, Coordinator {
-
+	// MARK: - Variables
 	private var homeCoordinator = HomeCoordinator()
 	private var searchCoordinator = SearchCoordinator()
 	private var downloadCoordinator = DownloadCoordinator()
 	private var moreCoordinator = MoreCoordinator()
 
 	var coordinator: CoordinatorProtocol?
-
+	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupTabbar()

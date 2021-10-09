@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class MoreCoordinator: CoordinatorProtocol {
-
+	// MARK: - Variavles
 	var navigationController: UINavigationController?
 
 	required init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {

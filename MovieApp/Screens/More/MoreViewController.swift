@@ -8,5 +8,8 @@
 import UIKit
 
 class MoreViewController: BaseViewController {
-
+	// MARK: - Life cycles
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
 }

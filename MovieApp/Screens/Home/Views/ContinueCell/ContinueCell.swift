@@ -8,16 +8,13 @@
 import UIKit
 
 class ContinueCell: UITableViewCell {
-	
+	// MARK: - Outlets
 	@IBOutlet private weak var imageContinueMovieCell: UIImageView!
 	@IBOutlet private weak var moreContinueButton: UIButton!
 	@IBOutlet private weak var infoContinueMovieButton: UIButton!
+	// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
-	}
-	override func setSelected(_ selected: Bool, animated: Bool) {
-		super.setSelected(selected, animated: animated)
-		// Configure the view for the selected state
 	}
 }
