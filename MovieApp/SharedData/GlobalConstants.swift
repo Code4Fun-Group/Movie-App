@@ -18,7 +18,7 @@ enum GlobalConstants {
 }
 
 enum Constants {
-	static let bannerViewCell = "BannerViewCell"
+	static let homeMovieCell = "HomeMovieCell"
 	static let previewMovieCell = "PreviewCell"
 	static let continueMovieCell = "ContinueCell"
 	static let listMovieCell = "ListMovieCell"

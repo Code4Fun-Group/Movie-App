@@ -41,7 +41,7 @@ private extension HomeViewController {
 	}
 	
 	func setupTableView() {
-		tableView.register(UINib(nibName: Constants.bannerViewCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.bannerViewCell)
+		tableView.register(UINib(nibName: Constants.homeMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.homeMovieCell)
 		tableView.register(UINib(nibName: Constants.previewMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.previewMovieCell)
 		tableView.register(UINib(nibName: Constants.continueMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.continueMovieCell)
 		tableView.register(UINib(nibName: Constants.listMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.listMovieCell)
@@ -73,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
 		let tabCell = CaseCell.allCases[indexPath.section]
 		switch tabCell {
 		case .home:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.bannerViewCell) as? BannerViewCell else { return UITableViewCell() }
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.homeMovieCell) as? HomeMovieCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: viewModel?.movieViewModels.last)
 			return cell
 		case .preview:

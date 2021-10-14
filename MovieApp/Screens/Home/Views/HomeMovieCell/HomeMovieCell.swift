@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BannerViewCell: UITableViewCell {
+class HomeMovieCell: UITableViewCell {
 	// MARK: - IOutlets
 	@IBOutlet private weak var logo: UIImageView!
 	@IBOutlet private weak var tvShowButton: UIButton!
