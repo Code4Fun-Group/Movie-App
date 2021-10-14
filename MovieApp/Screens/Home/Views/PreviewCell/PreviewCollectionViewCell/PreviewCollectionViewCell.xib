@@ -11,14 +11,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PreviewCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="158" height="171"/>
+            <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="158" height="171"/>
+                <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-PK-WRt">
-                        <rect key="frame" x="0.0" y="0.0" width="158" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
                     </imageView>
                 </subviews>
             </view>
@@ -29,11 +29,11 @@
                 <constraint firstItem="gTd-PK-WRt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GJT-xS-ffu"/>
                 <constraint firstItem="gTd-PK-WRt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="k8P-Cj-Zo1"/>
             </constraints>
-            <size key="customSize" width="158" height="171"/>
+            <size key="customSize" width="194" height="221"/>
             <connections>
                 <outlet property="imagePreview" destination="gTd-PK-WRt" id="bkk-Wd-aCB"/>
             </connections>
-            <point key="canvasLocation" x="-120" y="55"/>
+            <point key="canvasLocation" x="-94.20289855072464" y="71.316964285714278"/>
         </collectionViewCell>
     </objects>
 </document>

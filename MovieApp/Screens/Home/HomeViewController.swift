@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
 	// MARK: - Variables
 	var coordinators: CoordinatorProtocol?
 	private var viewModel: HomeViewModel?
+	private var navigation: UINavigationController?
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -144,7 +145,7 @@ extension HomeViewController: clickedCell {
 		let change = DetailsViewController.fromStoryboard()
 //		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //		guard let change = storyboard.instantiateViewController(withIdentifier: Constants.detailViewController) as? DetailsViewController else { return }
-		self.navigationController?.pushViewController(change, animated: true)
+		self.navigation?.pushViewController(change, animated: true)
 	}
 }
 extension HomeViewController: UITableViewDelegate {
