@@ -14,6 +14,22 @@ enum GlobalConstants {
 	static let detailsMovies = "Movie"
 	static let downloadMovies = "DownLoad"
 	static let more = "More"
+
+}
+
+enum Constants {
+	static let bannerViewCell = "BannerViewCell"
+	static let previewMovieCell = "PreviewCell"
+	static let continueMovieCell = "ContinueCell"
+	static let listMovieCell = "ListMovieCell"
+	static let tvShowMovieCell = "TvShowViewCell"
+	static let detailViewController = "DetailsViewController"
+}
+
+enum ConstantsCell {
+	static let previewCollectionCell = "PreviewCollectionViewCell"
+	static let continueItemCell = "ContinueItemCell"
+	static let listItemCellCV = "ListItemCellCV"
 }
 
 enum Icon {
@@ -22,4 +38,32 @@ enum Icon {
 	static let coming = "Comingsoon"
 	static let download = "DownLoad"
 	static let more = "More"
+}
+
+enum Config {
+	static let imageUrl = "https://image.tmdb.org/t/p/w500"
+}
+enum CaseCell: String, CaseIterable {
+	case home, preview, continueCell, list, europe, romance, action
+}
+extension CaseCell {
+	func title() -> String {
+		switch self {
+		case .home:
+			return "Home"
+		case .preview:
+			return "Preview"
+		case .continueCell:
+			return "Continue"
+		case .list:
+			return "List"
+		case .europe:
+			return "Europe"
+		case .romance:
+			return "Romance"
+		case .action:
+			return "Action"
+
+		}
+	}
 }

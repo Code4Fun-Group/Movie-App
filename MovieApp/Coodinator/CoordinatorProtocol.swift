@@ -17,6 +17,7 @@ protocol CoordinatorProtocol: AnyObject {
 	func comingViewController()
 	func downloadViewController()
 	func moreViewController()
+	func detailViewController()
 
 }
 
@@ -27,4 +28,5 @@ extension CoordinatorProtocol {
 	func comingViewController() { }
 	func downloadViewController() { }
 	func moreViewController() { }
+	func detailViewController() { }
 }

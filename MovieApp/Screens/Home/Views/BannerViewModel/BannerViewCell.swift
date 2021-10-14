@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeMovieCell: UITableViewCell {
+class BannerViewCell: UITableViewCell {
 	// MARK: - IOutlets
 	@IBOutlet private weak var logo: UIImageView!
 	@IBOutlet private weak var tvShowButton: UIButton!
@@ -18,21 +18,15 @@ class HomeMovieCell: UITableViewCell {
 	@IBOutlet private weak var playButton: UIButton!
 	@IBOutlet private weak var infoButton: UIButton!
 	@IBOutlet private weak var addMyListButton: UIButton!
-	
-	// MARK: - Variables
-	private var viewModel: IMovieViewModel!
+	@IBOutlet private weak var imageHomeMovieCell: UIImageView!
 	// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.backgroundView = UIImageView(image: UIImage(named: "image2"))
 	}
-	func configure(with cellViewModel: IMovieViewModel?) {
-		viewModel = cellViewModel
-		setData()
-	}
-}
-extension HomeMovieCell {
-	private func setData() {
-		self.titleMovieLabel.text = viewModel.title
+	// MARK: - configure
+	func configure(cellViewModel: MovieViewModel?) {
+		titleMovieLabel.text = cellViewModel?.title ?? ""
+		imageHomeMovieCell.downloaded(from: cellViewModel?.posterPath ?? "")
+		infoMovieLabel.text = cellViewModel?.mediaType ?? ""
 	}
 }

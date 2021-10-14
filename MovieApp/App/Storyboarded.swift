@@ -31,11 +31,9 @@ extension Storyboarded where Self: UIViewController {
 		guard let viewController: Self
 			= storyboard.instantiateViewController(withIdentifier: storyboardIdentifier)
 				as? Self else {
-
 					fatalError("Failed to instantiate view controller \(storyboardIdentifier)"
 						+ " from storyboard \(storyboardName)")
 		}
-
 		return viewController
 	}
 }

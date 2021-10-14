@@ -10,19 +10,15 @@ import Model
 
 protocol IHomeViewModel {
 	func getListMovies()
-	
 }
 class HomeViewModel {
-
 	weak var viewController: IHomeViewController?
-	var movieViewModels = [IMovieViewModel]()
-
+	var movieViewModels = [MovieViewModel]()
 	init(viewController: IHomeViewController) {
 		self.viewController = viewController
 	}
 }
-
-// MARK: - IHomeViewModel
+	// MARK: - IHomeViewModel
 extension HomeViewModel: IHomeViewModel {
 	func getListMovies() {
 		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
@@ -38,5 +34,4 @@ extension HomeViewModel: IHomeViewModel {
 			}
 		}
 	}
-	
 }
