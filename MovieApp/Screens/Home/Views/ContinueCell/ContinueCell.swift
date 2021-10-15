@@ -8,28 +8,32 @@
 import UIKit
 
 class ContinueCell: UITableViewCell {
-	// MARK: - Outlets
+// MARK: - Outlets
 	@IBOutlet weak var continueCollectionView: UICollectionView!
-	// MARK: - Variable
-	weak var delegate: clickedCell?
-	var continueData = [MovieViewModel]() {
+
+// MARK: - Variable
+	weak var delegate: PreviewCellDelegate?
+	private var continueData = [IMovieViewModel]() {
 		didSet {
 			continueCollectionView.reloadData()
 		}
 	}
-	// MARK: - Life cycles
+
+// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		continueCollectionView.delegate = self
 		continueCollectionView.dataSource = self
 		continueCollectionView.register(UINib(nibName: ConstantsCell.continueItemCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCell.continueItemCell)
 	}
-	// MARK: - configure
-	func configure(with continueMovie: [MovieViewModel]) {
+
+// MARK: - configure
+	func configure(with continueMovie: [IMovieViewModel]) {
 		self.continueData = continueMovie
 	}
 }
-	// MARK: - Life UICollectionViewDataSource
+
+// MARK: - Life UICollectionViewDataSource
 extension ContinueCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return continueData.count
@@ -41,7 +45,8 @@ extension ContinueCell: UICollectionViewDataSource {
 		return cell
 	}
 }
-	// MARK: - UICollectionViewDelegateFlowLayout
+
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ContinueCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)

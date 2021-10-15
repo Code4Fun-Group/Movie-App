@@ -9,43 +9,46 @@ import UIKit
 import Model
 
 class ListMovieCell: UITableViewCell {
-	// MARK: - Outlets
+// MARK: - Outlets
 	@IBOutlet private weak var collectionListView: UICollectionView!
-	// MARK: - Variables
-	weak var delegate: clickedCell?
-	var listData = [MovieViewModel]() {
+
+// MARK: - Variables
+	 weak var delegate: PreviewCellDelegate?
+	private var listData = [IMovieViewModel]() {
 		didSet {
 			collectionListView.reloadData()
 		}
 	}
 
-	// MARK: - Life cycles
+// MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		collectionListView.delegate = self
 		collectionListView.dataSource = self
-		collectionListView.register(UINib(nibName: ConstantsCell.listItemCellCV, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCell.listItemCellCV)
+		collectionListView.register(UINib(nibName: ConstantsCell.listItemCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCell.listItemCell)
 		
 	}
-	// MARK: - configure
-	func configure(with listMovie: [MovieViewModel]) {
+
+// MARK: - configure
+	func configure(with listMovie: [IMovieViewModel]) {
 		self.listData = listMovie
 	}
 }
-	// MARK: - UICollectionViewDataSource
+
+// MARK: - UICollectionViewDataSource
 extension ListMovieCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return listData.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = self.collectionListView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.listItemCellCV, for: indexPath) as? ListItemCellCV else { return UICollectionViewCell() }
+		guard let cell = self.collectionListView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.listItemCell, for: indexPath) as? ListItemCell else { return UICollectionViewCell() }
 		cell.configure(with: listData[indexPath.row])
 		return cell
 	}
-	
 }
-	// MARK: - UICollectionViewDelegateFlowLayout
+
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ListMovieCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)

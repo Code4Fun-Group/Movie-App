@@ -8,17 +8,22 @@
 import UIKit
 
 class PreviewCollectionViewCell: UICollectionViewCell {
-	// MARK: - Outlets
+	
+// MARK: - Outlets
 	@IBOutlet weak var imagePreview: UIImageView!
-	// MARK: - LifeCycle
+	@IBOutlet weak var labelPreview: UILabel!
+
+// MARK: - LifeCycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		imagePreview.layer.borderWidth = 1
-		imagePreview.layer.cornerRadius = imagePreview.frame.size.width / 2
+//		imagePreview.layer.borderWidth = 1
+//		imagePreview.layer.cornerRadius = imagePreview.frame.size.width / 2
 		self.backgroundColor = .black
 	}
-	// MARK: - configure
-	func configure(with listItem: MovieViewModel?) {
-		imagePreview.downloaded(from: listItem?.posterPath ?? "" )
+	
+// MARK: - configure
+	func configure(with listItem: IMovieViewModel?) {
+		imagePreview.linkCircle(from: listItem?.posterPath ?? "" )
+		labelPreview.text = listItem?.title ?? ""
 	}
 }

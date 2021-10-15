@@ -18,7 +18,8 @@ class HomeViewModel {
 		self.viewController = viewController
 	}
 }
-	// MARK: - IHomeViewModel
+
+// MARK: - IHomeViewModel
 extension HomeViewModel: IHomeViewModel {
 	func getListMovies() {
 		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in

@@ -15,10 +15,12 @@ protocol IHomeViewController: AnyObject {
 class HomeViewController: BaseViewController {
 	// MARK: - Outlets
 	@IBOutlet private weak var tableView: UITableView!
+
 	// MARK: - Variables
 	var coordinators: CoordinatorProtocol?
 	private var viewModel: HomeViewModel?
 	private var navigation: UINavigationController?
+
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -34,6 +36,7 @@ class HomeViewController: BaseViewController {
 		viewModel?.getListMovies()
 	}
 }
+
 // MARK: - Private function
 private extension HomeViewController {
 	func setupUI() {
@@ -48,7 +51,8 @@ private extension HomeViewController {
 		tableView.register(UINib(nibName: Constants.tvShowMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.tvShowMovieCell)
 	}
 }
-	// MARK: - IHomeViewController
+
+// MARK: - IHomeViewController
 extension HomeViewController: IHomeViewController {
 	func showMovies() {
 		tableView.reloadData()
@@ -59,7 +63,8 @@ extension HomeViewController: IHomeViewController {
 		print(errorMessage)
 	}
 }
-	// MARK: - UITableViewDataSource
+
+// MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return CaseCell.allCases.count
@@ -100,7 +105,7 @@ extension HomeViewController: UITableViewDataSource {
 		case 0:
 			return 590.0
 		case 1:
-			return 150.0
+			return 130.0
 		case 2 :
 			return 220.0
 		default:
@@ -138,9 +143,10 @@ extension HomeViewController: UITableViewDataSource {
 		}
 	}
 }
-	// MARK: - UITableViewDelegate
-extension HomeViewController: clickedCell {
-	func goDetailView(celldata: MovieViewModel) {
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: PreviewCellDelegate {
+	func goDetailView(celldata: IMovieViewModel) {
 		coordinators?.detailViewController()
 		let change = DetailsViewController.fromStoryboard()
 //		let storyboard = UIStoryboard(name: "Main", bundle: nil)
