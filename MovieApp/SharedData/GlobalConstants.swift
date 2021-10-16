@@ -14,6 +14,7 @@ enum GlobalConstants {
 	static let detailsMovies = "Movie"
 	static let downloadMovies = "DownLoad"
 	static let more = "More"
+
 }
 
 enum Icon {
@@ -22,4 +23,8 @@ enum Icon {
 	static let coming = "Comingsoon"
 	static let download = "DownLoad"
 	static let more = "More"
+}
+
+enum Config {
+	static let imageUrl = "https://image.tmdb.org/t/p/w500"
 }

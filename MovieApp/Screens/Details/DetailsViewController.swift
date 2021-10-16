@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController, Storyboarded {
+class DetailsViewController: BaseViewController {
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 	super.viewDidLoad()

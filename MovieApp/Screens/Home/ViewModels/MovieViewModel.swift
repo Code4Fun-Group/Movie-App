@@ -9,22 +9,39 @@ import UIKit
 import Model
 
 protocol IMovieViewModel {
-	var id: Int { get }
+	var backdropPath: String? { get }
+	var genreIds: [Int]? { get }
+	var id: Int? { get }
+	var mediaType: String? { get }
+	var posterPath: String? { get }
+	var releaseDate: String? { get }
 	var title: String? { get }
-	var imageURLStr: String? { get }
+	var voteAverage: Double? { get }
+	var voteCount: Int? { get }
 }
 
 struct MovieViewModel {
-	var id: Int
+	var backdropPath: String?
+	var genreIds: [Int]?
+	var id: Int?
+	var mediaType: String?
+	var posterPath: String?
+	var releaseDate: String?
 	var title: String?
-	var imageURLStr: String?
-	
+	var voteAverage: Double?
+	var voteCount: Int?
 }
 
 extension MovieViewModel: IMovieViewModel {
 	init(item: IMovieModel) {
-		id = item.id ?? 0
+		backdropPath = item.backdropPath
+		genreIds = item.genreIds
+		id = item.id
+		mediaType = item.mediaType
+		posterPath = item.posterPath
+		releaseDate = item.releaseDate
 		title = item.title
-		//	imageURLStr = Constants.baseImageURL + item.posterPath
+		voteAverage = item.voteAverage
+		voteCount = item.voteCount
 	}
 }

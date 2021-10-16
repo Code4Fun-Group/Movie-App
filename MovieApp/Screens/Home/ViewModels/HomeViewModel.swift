@@ -10,13 +10,10 @@ import Model
 
 protocol IHomeViewModel {
 	func getListMovies()
-	
 }
 class HomeViewModel {
-
 	weak var viewController: IHomeViewController?
-	var movieViewModels = [IMovieViewModel]()
-
+	var movieViewModels = [MovieViewModel]()
 	init(viewController: IHomeViewController) {
 		self.viewController = viewController
 	}
@@ -38,5 +35,4 @@ extension HomeViewModel: IHomeViewModel {
 			}
 		}
 	}
-	
 }

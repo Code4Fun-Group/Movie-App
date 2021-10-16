@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PreviewCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gTd-PK-WRt">
+                        <rect key="frame" x="0.0" y="0.0" width="194" height="221"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERQ-bL-mLO">
+                        <rect key="frame" x="5" y="167" width="184" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="2yR-Q7-sTC"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gTd-PK-WRt" secondAttribute="bottom" id="1yd-hL-5gX"/>
+                <constraint firstAttribute="bottom" secondItem="ERQ-bL-mLO" secondAttribute="bottom" id="BBa-vt-qcw"/>
+                <constraint firstAttribute="trailing" secondItem="gTd-PK-WRt" secondAttribute="trailing" id="CWp-ei-vt7"/>
+                <constraint firstItem="gTd-PK-WRt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GJT-xS-ffu"/>
+                <constraint firstItem="ERQ-bL-mLO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Get-o2-0By"/>
+                <constraint firstAttribute="trailing" secondItem="ERQ-bL-mLO" secondAttribute="trailing" constant="5" id="YiH-h1-UTp"/>
+                <constraint firstItem="gTd-PK-WRt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="k8P-Cj-Zo1"/>
+                <constraint firstAttribute="bottom" secondItem="ERQ-bL-mLO" secondAttribute="bottom" id="lTz-2x-s8y"/>
+                <constraint firstItem="ERQ-bL-mLO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ppY-Sr-YNf"/>
+            </constraints>
+            <size key="customSize" width="194" height="221"/>
+            <connections>
+                <outlet property="imagePreview" destination="gTd-PK-WRt" id="bkk-Wd-aCB"/>
+                <outlet property="labelPreview" destination="ERQ-bL-mLO" id="WfW-0u-Aox"/>
+            </connections>
+            <point key="canvasLocation" x="-94.20289855072464" y="70.647321428571431"/>
+        </collectionViewCell>
+    </objects>
+</document>
