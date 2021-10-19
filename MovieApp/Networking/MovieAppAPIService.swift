@@ -32,7 +32,7 @@ extension MovieAppAPIService: IMovieAPIService {
 			guard let self = self else { return }
 			switch result {
 			case .success(let data):
-				self.resourceHandler.getMovies(data, completion: completion)
+ 				self.resourceHandler.getMovies(data, completion: completion)
 			case .failure(let error):
 				guard let errorData = error.responseData else {
 					completion(.failure(error))

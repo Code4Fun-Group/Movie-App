@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="273" id="KGk-i7-Jjw" customClass="TvShowViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="273"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="273"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTD-56-UfE">
+                        <rect key="frame" x="5" y="5" width="276" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gaM-tV-yxc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vte-0L-u3e">
+                        <rect key="frame" x="0.0" y="31" width="286" height="192"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaV-Is-H8x">
+                        <rect key="frame" x="152" y="228" width="129" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="129" id="74U-xt-H0S"/>
+                        </constraints>
+                        <state key="normal" title="    My List" image="Vector 4"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njh-35-QQ1">
+                        <rect key="frame" x="5" y="228" width="139" height="40"/>
+                        <state key="normal" image="Play Button"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                <constraints>
+                    <constraint firstItem="vte-0L-u3e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4be-h9-AwL"/>
+                    <constraint firstItem="QaV-Is-H8x" firstAttribute="leading" secondItem="Njh-35-QQ1" secondAttribute="trailing" constant="8" symbolic="YES" id="5Wb-PJ-Zxv"/>
+                    <constraint firstItem="QaV-Is-H8x" firstAttribute="top" secondItem="vte-0L-u3e" secondAttribute="bottom" constant="5" id="7aY-wT-FTK"/>
+                    <constraint firstItem="MTD-56-UfE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="7gA-e9-oXf"/>
+                    <constraint firstItem="vte-0L-u3e" firstAttribute="top" secondItem="MTD-56-UfE" secondAttribute="bottom" constant="5" id="BAY-wr-OHw"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QaV-Is-H8x" secondAttribute="bottom" constant="-6" id="H5p-CE-vuy"/>
+                    <constraint firstAttribute="bottom" secondItem="vte-0L-u3e" secondAttribute="bottom" constant="50" id="NK5-9v-zeH"/>
+                    <constraint firstItem="Njh-35-QQ1" firstAttribute="bottom" secondItem="QaV-Is-H8x" secondAttribute="bottom" id="NdH-Bi-sXU"/>
+                    <constraint firstItem="MTD-56-UfE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="QnL-iZ-G7M"/>
+                    <constraint firstItem="Njh-35-QQ1" firstAttribute="top" secondItem="QaV-Is-H8x" secondAttribute="top" id="Rqv-G5-q4G"/>
+                    <constraint firstItem="QaV-Is-H8x" firstAttribute="trailing" secondItem="MTD-56-UfE" secondAttribute="trailing" id="TTa-SB-EGF"/>
+                    <constraint firstAttribute="trailing" secondItem="vte-0L-u3e" secondAttribute="trailing" id="blU-EE-8dA"/>
+                    <constraint firstAttribute="trailing" secondItem="MTD-56-UfE" secondAttribute="trailing" constant="5" id="d8M-CQ-aYu"/>
+                    <constraint firstItem="vte-0L-u3e" firstAttribute="top" secondItem="MTD-56-UfE" secondAttribute="bottom" constant="5" id="niD-xI-vjC"/>
+                    <constraint firstItem="Njh-35-QQ1" firstAttribute="leading" secondItem="MTD-56-UfE" secondAttribute="leading" id="wI7-QK-zSG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageTvShow" destination="vte-0L-u3e" id="IM7-RD-hzt"/>
+                <outlet property="myListTvShowButton" destination="QaV-Is-H8x" id="Sht-35-N6N"/>
+                <outlet property="playTvShowButton" destination="Njh-35-QQ1" id="ceQ-ly-Mnd"/>
+                <outlet property="titleTvShow" destination="MTD-56-UfE" id="2Up-Bc-Mrf"/>
+            </connections>
+            <point key="canvasLocation" x="19" y="16"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Play Button" width="101" height="38"/>
+        <image name="Vector 4" width="23" height="19"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

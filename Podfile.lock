@@ -1,6 +1,7 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.4)
   - Common (1.0)
+  - Kingfisher (7.0.0)
   - Model (1.0):
     - Common
   - netfox (1.19.0)
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Common (from `./Modules/Common`)
+  - Kingfisher (~> 7.0)
   - Model (from `./Modules/Model`)
   - netfox
   - Networking (from `./Modules/Networking`)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
     - netfox
     - SwiftLint
 
@@ -32,13 +35,14 @@ EXTERNAL SOURCES:
     :path: "./Modules/Networking"
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  Common: 2be04419239ac4b7d7cc39e3372f30ead2cda73b
-  Model: 7f3e5e23177077809e32d5f4f061ee2824ccddfe
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Common: 11545c1011af0d67b08465a99102a076af7ef3f8
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  Model: acaaa1cd5ea778c12e50a864169c2565048758b0
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
-  Networking: e2ffcb34eb8b8c6d816601b82c81be981cad0bd9
+  Networking: 7ffe8f0721b2aaaeaedd899ba4b62d8334830c69
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: 7fd84f34bdb940ab4c6c28ea5e9654ec4ba96a83
+PODFILE CHECKSUM: 9e083104f8972a9e5b4eea1d6d1523817196e192
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

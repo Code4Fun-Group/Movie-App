@@ -22,7 +22,7 @@ extension MovieAppResourceResponseAdapter: INetworkErrorResponseHandler {
 												 status: serverError.status)
 				completion(error)
 			case .failure:
-				let error = NetworkResponseError(message: "Unknown",
+				let error = NetworkResponseError(message: "NetUnknown",
 												 name: "Unknown",
 												 status: nil)
 				completion(error)
@@ -37,7 +37,7 @@ extension MovieAppResourceResponseAdapter: IMovieResourceResponseAdataper {
 			switch response {
 			case .success(let resources):
 				let movies = resources.compactMap({
-					MovieModel(item: $0)
+					MovieModel(movies: $0)
 				})
 				completion(.success(movies))
 			case .failure(let error):

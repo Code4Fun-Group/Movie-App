@@ -24,6 +24,7 @@ end
 
 def xctools
 	pod 'SwiftLint'
+    pod 'Kingfisher', '~> 7.0'
 end
 
 def analytics

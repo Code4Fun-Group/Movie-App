@@ -16,23 +16,22 @@ protocol IHomeViewController: AnyObject {
 	func showError(_ errorMessage: String)
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 	// MARK: - Outlets
 	@IBOutlet private weak var tableView: UITableView!
 	
 	// MARK: - Variables
 	private var viewModel: HomeViewModel?
-	
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel = HomeViewModel(viewController: self)
+		setupUI()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
-		viewModel?.getMovies()
+		viewModel?.getListMovies()
 	}
 }
 
@@ -43,6 +42,8 @@ private extension HomeViewController {
 	}
 	
 	func setupTableView() {
+		tableView.delegate = self
+		tableView.dataSource = self
 		tableView.register(UINib(nibName: Constants.homeMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.homeMovieCell)
 	}
 }
@@ -55,7 +56,7 @@ extension HomeViewController: IHomeViewController {
 	
 	func showError(_ errorMessage: String) {
 		// TODO: - Show popup error
-		
+		print(errorMessage)
 	}
 }
 
@@ -66,10 +67,9 @@ extension HomeViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.homeMovieCell) as? HomeMovieCell else { return UITableViewCell() }
+		cell.configure(with: viewModel?.movieViewModels[indexPath.row])
 		return cell
 	}
 }
-
 extension HomeViewController: UITableViewDelegate {
-	
 }
