@@ -13,15 +13,14 @@ protocol IHomeViewController: AnyObject {
 }
 
 class HomeViewController: BaseViewController {
-	// MARK: - Outlets
+// MARK: - Outlets
 	@IBOutlet private weak var tableView: UITableView!
 
-	// MARK: - Variables
+// MARK: - Variables
 	var coordinators: CoordinatorProtocol?
 	private var viewModel: HomeViewModel?
-	private var navigation: UINavigationController?
 
-	// MARK: - Life cycles
+// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel = HomeViewModel(viewController: self)
@@ -84,18 +83,22 @@ extension HomeViewController: UITableViewDataSource {
 		case .preview:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.previewMovieCell) as? PreviewCell else { return UITableViewCell() }
 			cell.configure(preview: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
 			return cell
 		case .continueCell:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.continueMovieCell) as? ContinueCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
 			return cell
 		case .list:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
 			return cell
 		default:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
 			return cell
 		}
 	}
@@ -145,13 +148,12 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension HomeViewController: PreviewCellDelegate {
+extension HomeViewController: CellDelegate {
 	func goDetailView(celldata: IMovieViewModel) {
 		coordinators?.detailViewController()
 		let change = DetailsViewController.fromStoryboard()
-//		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//		guard let change = storyboard.instantiateViewController(withIdentifier: Constants.detailViewController) as? DetailsViewController else { return }
-		self.navigation?.pushViewController(change, animated: true)
+		self.navigationController?.pushViewController(change, animated: true)
+
 	}
 }
 extension HomeViewController: UITableViewDelegate {

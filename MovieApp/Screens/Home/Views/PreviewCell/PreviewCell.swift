@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PreviewCellDelegate: AnyObject {
+protocol CellDelegate: AnyObject {
 	func goDetailView(celldata: IMovieViewModel)
 }
 
@@ -16,7 +16,7 @@ class PreviewCell: UITableViewCell {
 	@IBOutlet weak var previewCollectionView: UICollectionView!
 
 // MARK: - Variables
-	weak var delegate: PreviewCellDelegate?
+	weak var delegate: CellDelegate?
 	private var previewData = [IMovieViewModel]() {
 		didSet {
 			previewCollectionView.reloadData()

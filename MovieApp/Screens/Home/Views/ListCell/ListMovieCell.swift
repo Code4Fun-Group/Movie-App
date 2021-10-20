@@ -13,7 +13,7 @@ class ListMovieCell: UITableViewCell {
 	@IBOutlet private weak var collectionListView: UICollectionView!
 
 // MARK: - Variables
-	 weak var delegate: PreviewCellDelegate?
+	 weak var delegate: CellDelegate?
 	private var listData = [IMovieViewModel]() {
 		didSet {
 			collectionListView.reloadData()
@@ -44,6 +44,10 @@ extension ListMovieCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.collectionListView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.listItemCell, for: indexPath) as? ListItemCell else { return UICollectionViewCell() }
 		cell.configure(with: listData[indexPath.row])
+		cell.layer.masksToBounds = true
+		cell.layer.cornerRadius = 5
+		cell.layer.borderWidth = 2
+		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
@@ -60,5 +64,12 @@ extension ListMovieCell: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 5
+	}
+}
+
+// MARK: - UICollectionViewDelegate
+extension ListMovieCell: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		self.delegate?.goDetailView(celldata: listData[indexPath.row])
 	}
 }

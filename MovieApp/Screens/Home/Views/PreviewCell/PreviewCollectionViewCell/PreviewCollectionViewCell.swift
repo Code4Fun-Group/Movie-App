@@ -16,8 +16,6 @@ class PreviewCollectionViewCell: UICollectionViewCell {
 // MARK: - LifeCycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-//		imagePreview.layer.borderWidth = 1
-//		imagePreview.layer.cornerRadius = imagePreview.frame.size.width / 2
 		self.backgroundColor = .black
 	}
 	

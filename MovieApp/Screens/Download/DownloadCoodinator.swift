@@ -16,7 +16,7 @@ class DownloadCoordinator: CoordinatorProtocol {
 		self.navigationController = navigationController
 		self.navigationController?.isNavigationBarHidden = true
 
-		let view = MovieApp.DownloadViewController.fromStoryboard()
+		let view = DownloadViewController.fromStoryboard()
 		view.coordinator = self
 		view.tabBarItem.image = UIImage(named: Icon.download)
 		view.tabBarItem.title = GlobalConstants.downloadMovies
