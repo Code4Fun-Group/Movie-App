@@ -23,6 +23,7 @@ class DownloadViewController: BaseViewController {
 	// MARK: - Variables
 	var coordinators: CoordinatorProtocol?
 	private var viewModel: DownloadViewModel?
+
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -49,6 +50,7 @@ private extension DownloadViewController {
 	func setupTableView() {
 		downloadCollectionView.register(UINib(nibName: ConstantsCellDownload.downloadCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCellDownload.downloadCell)
 	}
+
 	func downloadButton() -> UIButton {
 		let button = UIButton()
 		button.frame = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: 50)
@@ -62,6 +64,7 @@ private extension DownloadViewController {
 //		button.addTarget(self, action: #selector(onSignInPress), for: .touchUpInside)
 		return button
 	}
+
 	 func imageDownloadView() -> UIImageView {
 		let img = UIImageView()
 		img.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
@@ -76,6 +79,7 @@ private extension DownloadViewController {
 		return img
 	}
 }
+
 // MARK: - UICollectionViewDataSource
 extension DownloadViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
