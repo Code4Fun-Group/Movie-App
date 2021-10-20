@@ -8,11 +8,8 @@
 import UIKit
 
 class DetailsViewController: BaseViewController {
+
 	// MARK: - Life cycles
-	override func viewDidLoad() {
-	super.viewDidLoad()
-	}
-	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.navigationController?.isNavigationBarHidden = false
