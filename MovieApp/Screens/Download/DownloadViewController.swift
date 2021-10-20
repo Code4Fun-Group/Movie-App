@@ -36,7 +36,7 @@ class DownloadViewController: BaseViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		view.backgroundColor = .black
+		downloadCollectionView.backgroundColor = .black
 		viewModel?.getMovies()
 	}
 }

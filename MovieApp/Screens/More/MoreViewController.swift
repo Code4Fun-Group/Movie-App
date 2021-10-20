@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol IMoreViewController: AnyObject {
+	func showMovies()
+	func showError(_ errorMessage: String)
+}
+
 class MoreViewController: BaseViewController {
 	// MARK: - Life cycles
 	override func viewDidLoad() {

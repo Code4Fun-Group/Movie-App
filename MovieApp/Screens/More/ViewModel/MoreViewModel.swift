@@ -12,7 +12,11 @@ protocol IMoreViewModel {
 }
 
 class MoreViewModel {
-
+	weak var viewController: IMoreViewController?
+	var movieViewModels = [MovieViewModel]()
+	init(viewController: IMoreViewController) {
+		self.viewController = viewController
+	}
 }
 // MARK: - IMoreViewModel
 extension MoreViewModel: IMoreViewModel {
