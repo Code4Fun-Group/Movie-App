@@ -242,12 +242,12 @@
 		04094304270D502E00B4D136 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				042CF81F2710864000275E9F /* MoreCoodinator.swift */,
 				04094338270D5BF200B4D136 /* MoreViewController.storyboard */,
 				04094326270D5B5F00B4D136 /* MoreViewController.swift */,
 				04094314270D5AAA00B4D136 /* ViewModel */,
 				04094315270D5AB300B4D136 /* Models */,
 				04094316270D5ABC00B4D136 /* Views */,
-				042CF81F2710864000275E9F /* MoreCoodinator.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
