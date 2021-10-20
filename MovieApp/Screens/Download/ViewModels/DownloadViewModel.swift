@@ -10,6 +10,7 @@ import Foundation
 protocol IDownloadViewModel {
 	func getMovies()
 }
+
 class DownloadViewModel {
 	weak var viewController: IDownloadViewController?
 	var downloadMovieViewModels = [DownloadMovieViewModel]()
