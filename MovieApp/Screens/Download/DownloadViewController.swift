@@ -20,11 +20,11 @@ class DownloadViewController: BaseViewController {
 // MARK: - Iboutlets
 	@IBOutlet private weak var downloadCollectionView: UICollectionView!
 	
-	// MARK: - Variables
+// MARK: - Variables
 	var coordinators: CoordinatorProtocol?
 	private var viewModel: DownloadViewModel?
 
-	// MARK: - Life cycles
+// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel = DownloadViewModel(viewController: self)
