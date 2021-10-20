@@ -66,4 +66,11 @@ class AppCoordinator: CoordinatorProtocol {
 
 		navigationController?.isNavigationBarHidden = true
 	}
+
+	func detailViewController() {
+		let view = DetailsViewController.fromStoryboard()
+		self.navigationController?.pushViewController(view, animated: true)
+
+		navigationController?.isNavigationBarHidden = false
+	}
 }

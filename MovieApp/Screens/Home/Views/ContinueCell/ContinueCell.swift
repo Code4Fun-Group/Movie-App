@@ -12,7 +12,7 @@ class ContinueCell: UITableViewCell {
 	@IBOutlet weak var continueCollectionView: UICollectionView!
 
 // MARK: - Variable
-	weak var delegate: PreviewCellDelegate?
+	weak var delegate: CellDelegate?
 	private var continueData = [IMovieViewModel]() {
 		didSet {
 			continueCollectionView.reloadData()
@@ -42,6 +42,10 @@ extension ContinueCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.continueCollectionView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.continueItemCell, for: indexPath) as? ContinueItemCell else { return UICollectionViewCell() }
 		cell.configure(with: continueData[indexPath.row])
+		cell.layer.masksToBounds = true
+		cell.layer.cornerRadius = 5
+		cell.layer.borderWidth = 2
+		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
@@ -58,5 +62,11 @@ extension ContinueCell: UICollectionViewDelegateFlowLayout {
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 5
+	}
+}
+// MARK: - UICollectionViewDelegate
+extension ContinueCell: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		self.delegate?.goDetailView(celldata: continueData[indexPath.row])
 	}
 }
