@@ -330,6 +330,8 @@
 		04094316270D5ABC00B4D136 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				042CFB1F271FF36E00275E9F /* SharedCell */,
+				042CFB1E271FF34600275E9F /* ProfileCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +442,20 @@
 				042CFA45271728EE00275E9F /* ContinueItemCell.xib */,
 			);
 			path = ContinueItemCell;
+			sourceTree = "<group>";
+		};
+		042CFB1E271FF34600275E9F /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		042CFB1F271FF36E00275E9F /* SharedCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SharedCell;
 			sourceTree = "<group>";
 		};
 		04C1A034270AA0310036BD7D /* Tabbar */ = {
