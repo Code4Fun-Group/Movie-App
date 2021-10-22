@@ -1,13 +1,13 @@
 //
-//  DownloadMovieViewModel.swift
+//  MoreFileViewModel.swift
 //  MovieApp
 //
-//  Created by MinhDev on 10/19/21.
+//  Created by MinhDev on 10/21/21.
 //
 
 import Model
 
-protocol IDownloadMovieViewModel {
+protocol IMoreMovieViewModel {
 	var backdropPath: String? { get }
 	var genreIds: [Int]? { get }
 	var id: Int? { get }
@@ -19,7 +19,7 @@ protocol IDownloadMovieViewModel {
 	var voteCount: Int? { get }
 }
 
-struct DownloadMovieViewModel {
+struct MoreMovieViewModel {
 	var backdropPath: String?
 	var genreIds: [Int]?
 	var id: Int?
@@ -31,7 +31,7 @@ struct DownloadMovieViewModel {
 	var voteCount: Int?
 }
 
-extension DownloadMovieViewModel: IDownloadMovieViewModel {
+extension MoreMovieViewModel: IMoreMovieViewModel {
 	init(item: IMovieModel) {
 		backdropPath = item.backdropPath
 		genreIds = item.genreIds

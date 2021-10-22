@@ -8,18 +8,31 @@
 import Foundation
 
 protocol IMoreViewModel {
-	func getMovies()
+	func getMore()
 }
 
 class MoreViewModel {
 	weak var viewController: IMoreViewController?
-	var movieViewModels = [MovieViewModel]()
+	var moreViewModels = [MoreMovieViewModel]()
 	init(viewController: IMoreViewController) {
 		self.viewController = viewController
 	}
 }
+
 // MARK: - IMoreViewModel
 extension MoreViewModel: IMoreViewModel {
-	func getMovies() {
+	func getMore() {
+		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
+			guard let self = self else { return }
+			switch result {
+			case .success(let movies):
+				self.moreViewModels = movies.compactMap({
+					MoreMovieViewModel(item: $0)
+				})
+				self.viewController?.showMovies()
+			case .failure(let error):
+				self.viewController?.showError(error.localizedDescription)
+			}
+		}
 	}
 }

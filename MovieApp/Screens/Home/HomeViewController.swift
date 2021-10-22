@@ -39,7 +39,7 @@ class HomeViewController: BaseViewController {
 // MARK: - Private function
 private extension HomeViewController {
 	func setupUI() {
-		self.tableView.backgroundColor = .black
+		self.tableView.backgroundColor = .clear
 	}
 	
 	func setupTableView() {
