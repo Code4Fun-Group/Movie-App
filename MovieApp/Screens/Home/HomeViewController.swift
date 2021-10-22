@@ -79,21 +79,25 @@ extension HomeViewController: UITableViewDataSource {
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.homeMovieCell) as? HomeMovieCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: viewModel?.movieViewModels.randomElement())
 			return cell
+
 		case .preview:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.previewMovieCell) as? PreviewCell else { return UITableViewCell() }
 			cell.configure(preview: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
+
 		case .continueCell:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.continueMovieCell) as? ContinueCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
+
 		case .list:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
+			
 		default:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])

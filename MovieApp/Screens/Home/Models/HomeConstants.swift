@@ -27,7 +27,7 @@ enum CaseCell: String, CaseIterable {
 }
 
 extension CaseCell {
-   func title() -> String {
+	func title() -> String {
 	   switch self {
 	   case .home:
 		   return "Home"
@@ -43,7 +43,6 @@ extension CaseCell {
 		   return "Romance"
 	   case .action:
 		   return "Action"
-
 	   }
-   }
+	}
 }

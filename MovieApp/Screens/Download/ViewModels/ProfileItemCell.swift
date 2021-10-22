@@ -20,6 +20,8 @@ class ProfileItemCell: UICollectionViewCell {
 		self.layer.borderWidth = 2.0
 		self.layer.borderColor = UIColor.white.cgColor
 	}
+	
+// MARK: - configure
 	func configure(with listItem: IMoreMovieViewModel?) {
 		imageProfile.linkDownloaded(from: listItem?.posterPath ?? "" )
 	}
