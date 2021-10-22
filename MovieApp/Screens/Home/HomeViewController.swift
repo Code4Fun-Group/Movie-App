@@ -158,3 +158,29 @@ extension HomeViewController: CellDelegate {
 }
 extension HomeViewController: UITableViewDelegate {
 }
+// MARK: - Enum
+private enum CaseCell: String, CaseIterable {
+	case home, preview, continueCell, list, europe, romance, action
+}
+
+private extension CaseCell {
+	func title() -> String {
+		switch self {
+		case .home:
+			return "Home"
+		case .preview:
+			return "Preview"
+		case .continueCell:
+			return "Continue"
+		case .list:
+			return "List"
+		case .europe:
+			return "Europe"
+		case .romance:
+			return "Romance"
+		case .action:
+			return "Action"
+
+		}
+	}
+}
