@@ -45,4 +45,18 @@ extension MovieAppResourceResponseAdapter: IMovieResourceResponseAdataper {
 			}
 		}
 	}
+
+	func getSearchMovies(_ data: Data?, completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
+		jsonHandler.handle(jsonData: data) { (response: Result<[MovieResponse], Error>) in
+			switch response {
+			case .success(let resources):
+				let movies = resources.compactMap({
+					MovieModel(movies: $0)
+				})
+				completion(.success(movies))
+			case .failure(let error):
+				completion(.failure(error))
+			}
+		}
+	}
 }

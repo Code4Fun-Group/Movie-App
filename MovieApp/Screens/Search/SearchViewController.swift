@@ -133,11 +133,12 @@ extension SearchViewController: UISearchBarDelegate {
 		if searchText.isEmpty == false {
 			searchActive = true
 			filter.removeAll()
-			for item in searchViewModel?.searchMovieViewModels ?? [] {
-				if item.title?.uppercased().contains(data.uppercased()) == true {
-					filter = searchViewModel?.searchMovieViewModels.filter { ($0.title ?? "").contains(searchText) } ?? []
-				}
-			}
+//			for item in searchViewModel?.searchMovieViewModels ?? [] {
+//				if item.title?.uppercased().contains(data.uppercased()) == true {
+//					filter = searchViewModel?.searchMovieViewModels.filter { ($0.title ?? "").contains(searchText) } ?? []
+//				}
+//			}
+			searchViewModel?.getSearchMovies(searchText: searchText)
 		} else {
 			searchActive = false
 			filter.removeAll()
@@ -145,7 +146,6 @@ extension SearchViewController: UISearchBarDelegate {
 		searchCollectionView.reloadData()
 	}
 
-//	searchViewModel?.search(<#T##String#>, <#T##Bool#>, <#T##[SearchMovieViewModel]#>, <#T##[SearchMovieViewModel]#>)
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
 		filter.removeAll()
 		searchCollectionView.reloadData()

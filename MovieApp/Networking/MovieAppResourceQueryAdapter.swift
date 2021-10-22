@@ -24,4 +24,11 @@ extension MovieAppResourceQueryAdapter: IMovieResourceQueryAdapter {
 		request.httpMethod = "GET"
 		return request
 	}
+
+	func getSearchMovies(searchText: String) -> URLRequest {
+		let url = config.endpoint.appendingPathComponent("search?query=\(searchText)")
+		var request = URLRequest(url: url)
+		request.httpMethod = "GET"
+		return request
+	}
 }
