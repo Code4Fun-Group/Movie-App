@@ -10,6 +10,7 @@ import Model
 
 protocol IHomeViewModel {
 	func getListMovies()
+	
 }
 class HomeViewModel {
 	weak var viewController: IHomeViewController?

@@ -29,7 +29,6 @@ extension DownloadViewModel: IDownloadViewModel {
 				self.downloadMovieViewModels = movies.compactMap({
 					DownloadMovieViewModel(item: $0)
 				})
-//			self.viewController?.showError()
 				self.viewController?.showMovies()
 			case .failure:
 				self.viewController?.showError()

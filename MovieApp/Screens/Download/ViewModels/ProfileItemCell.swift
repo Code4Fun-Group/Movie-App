@@ -15,6 +15,10 @@ class ProfileItemCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		imageProfile.image = UIImage(named: "Logo")
+		self.layer.masksToBounds = true
+		self.layer.cornerRadius = 5.0
+		self.layer.borderWidth = 2.0
+		self.layer.borderColor = UIColor.white.cgColor
 	}
 	func configure(with listItem: IMoreMovieViewModel?) {
 		imageProfile.linkDownloaded(from: listItem?.posterPath ?? "" )

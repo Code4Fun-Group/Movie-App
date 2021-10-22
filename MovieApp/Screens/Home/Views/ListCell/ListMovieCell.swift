@@ -26,7 +26,6 @@ class ListMovieCell: UITableViewCell {
 		collectionListView.delegate = self
 		collectionListView.dataSource = self
 		collectionListView.register(UINib(nibName: ConstantsCell.listItemCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCell.listItemCell)
-		
 	}
 
 // MARK: - configure
@@ -44,10 +43,6 @@ extension ListMovieCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.collectionListView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.listItemCell, for: indexPath) as? ListItemCell else { return UICollectionViewCell() }
 		cell.configure(with: listData[indexPath.row])
-		cell.layer.masksToBounds = true
-		cell.layer.cornerRadius = 5
-		cell.layer.borderWidth = 2
-		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
@@ -55,15 +50,15 @@ extension ListMovieCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ListMovieCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)
+		return CGSize(width: collectionView.frame.width / 3.0, height: collectionView.frame.height)
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 5
+		return 5.0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-		return 5
+		return 5.0
 	}
 }
 

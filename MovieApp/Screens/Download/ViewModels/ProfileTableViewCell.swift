@@ -46,10 +46,6 @@ extension ProfileTableViewCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.profileItem.dequeueReusableCell(withReuseIdentifier: ConstantsCellProfile.profileItemCell, for: indexPath) as? ProfileItemCell else { return UICollectionViewCell() }
 		cell.configure(with: profileData[indexPath.row])
-		cell.layer.masksToBounds = true
-		cell.layer.cornerRadius = 5
-		cell.layer.borderWidth = 2
-		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
@@ -57,21 +53,20 @@ extension ProfileTableViewCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ProfileTableViewCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)
+		return CGSize(width: collectionView.frame.width / 3.0, height: collectionView.frame.height)
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 15
+		return 15.0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-		return 10
+		return 10.0
 	}
 }
 
 // MARK: - UICollectionViewDelegate
 extension ProfileTableViewCell: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//		self.delegate?.goDetailView(celldata: continueData[indexPath.row])
 	}
 }

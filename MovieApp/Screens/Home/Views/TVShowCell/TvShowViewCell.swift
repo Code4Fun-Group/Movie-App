@@ -14,9 +14,9 @@ class TvShowViewCell: UITableViewCell {
 	@IBOutlet private weak var imageTvShow: UIImageView!
 	@IBOutlet private weak var playTvShowButton: UIButton!
 	@IBOutlet private weak var myListTvShowButton: UIButton!
+
 // MARK: - Life cycles
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		// Initialization code
 	}
 }

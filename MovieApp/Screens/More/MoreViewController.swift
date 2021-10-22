@@ -74,36 +74,35 @@ extension MoreViewController: UITableViewDataSource {
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.profileCell) as? ProfileTableViewCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.moreViewModels ?? [])
 			return cell
+
 		case .shared:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.sharedCell) as? SharedTableViewCell else { return UITableViewCell() }
-//			cell.configure()
-//			cell.delegate = self
 			return cell
+
 		case .mylist:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.myListCell) as? MyListTableViewCell else { return UITableViewCell() }
-//			cell.configure(with: viewModel?.movieViewModels ?? [])
-//			cell.delegate = self
 			return cell
+
 		case .appsetting:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: MoreCell.title(MoreCell.appsetting)())
-			//			cell.delegate = self
 			return cell
+
 		case .account:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: MoreCell.title(MoreCell.account)())
-		//	cell.delegate = self
 			return cell
+
 		case .help:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: MoreCell.title(MoreCell.help)())
-	//		cell.delegate = self
 			return cell
+
 		case .signout:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
 			cell.configure(cellViewModel: MoreCell.title(MoreCell.signout)())
-//			cell.delegate = self
 			return cell
+			
 		}
 	}
 
@@ -121,38 +120,4 @@ extension MoreViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension MoreViewController: UITableViewDelegate {
-}
-
-// MARK: - Enum
-private enum ConstantsCellMore {
-	static let profileCell = "ProfileTableViewCell"
-	static let sharedCell = "SharedTableViewCell"
-	static let myListCell = "MyListTableViewCell"
-	static let standardCell = "StandardTableViewCell"
-}
-
-private enum MoreCell: String, CaseIterable {
-	case detail, shared, mylist, appsetting, account, help, signout
-}
-
-private extension MoreCell {
-	func title() -> String {
-		switch self {
-		case .detail:
-			return "Detail"
-		case .shared:
-			return "Shared"
-		case .mylist:
-			return "Mylist"
-		case .appsetting:
-			return "Appsetting"
-		case .account:
-			return "Account"
-		case .help:
-			return "Help"
-		case .signout:
-			return "Signout"
-
-		}
-	}
 }

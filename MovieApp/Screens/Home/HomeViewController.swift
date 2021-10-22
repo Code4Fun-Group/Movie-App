@@ -58,7 +58,6 @@ extension HomeViewController: IHomeViewController {
 	}
 	
 	func showError(_ errorMessage: String) {
-		// TODO: - Show popup error
 		print(errorMessage)
 	}
 }
@@ -78,7 +77,7 @@ extension HomeViewController: UITableViewDataSource {
 		switch tabCell {
 		case .home:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.homeMovieCell) as? HomeMovieCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: viewModel?.movieViewModels.last)
+			cell.configure(cellViewModel: viewModel?.movieViewModels.randomElement())
 			return cell
 		case .preview:
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.previewMovieCell) as? PreviewCell else { return UITableViewCell() }
@@ -129,10 +128,10 @@ extension HomeViewController: UITableViewDataSource {
 			let view = UIView()
 			return view
 		} else {
-			let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 40.0))
+			let headerView = UIView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: tableView.frame.width, height: 40.0))
 			headerView.backgroundColor = .black
 			let label = UILabel()
-			label.frame = CGRect.init(x: 10, y: 0, width: headerView.frame.width - 10, height: headerView.frame.height)
+			label.frame = CGRect.init(x: 10.0, y: 0.0, width: headerView.frame.width - 10.0, height: headerView.frame.height)
 			label.font = UIFont(name: "HelveticaNeue-Bold", size: 35.0)
 			label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 			headerView.addSubview(label)
@@ -153,34 +152,8 @@ extension HomeViewController: CellDelegate {
 		coordinators?.detailViewController()
 		let change = DetailsViewController.fromStoryboard()
 		self.navigationController?.pushViewController(change, animated: true)
-
 	}
 }
+
 extension HomeViewController: UITableViewDelegate {
-}
-// MARK: - Enum
-private enum CaseCell: String, CaseIterable {
-	case home, preview, continueCell, list, europe, romance, action
-}
-
-private extension CaseCell {
-	func title() -> String {
-		switch self {
-		case .home:
-			return "Home"
-		case .preview:
-			return "Preview"
-		case .continueCell:
-			return "Continue"
-		case .list:
-			return "List"
-		case .europe:
-			return "Europe"
-		case .romance:
-			return "Romance"
-		case .action:
-			return "Action"
-
-		}
-	}
 }
