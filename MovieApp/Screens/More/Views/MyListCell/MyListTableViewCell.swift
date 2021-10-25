@@ -13,8 +13,4 @@ class MyListTableViewCell: UITableViewCell {
 	@IBOutlet private weak var imageMylist: UIImageView!
 	@IBOutlet private weak var myListlabel: UILabel!
 
-// MARK: - Life Cycle
-	override func awakeFromNib() {
-		super.awakeFromNib()
-}
 }
