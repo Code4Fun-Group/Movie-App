@@ -16,5 +16,6 @@ class MoreViewController: BaseViewController {
 	// MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		view.backgroundColor = .black
 	}
 }
