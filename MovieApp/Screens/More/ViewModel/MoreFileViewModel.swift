@@ -16,7 +16,6 @@ protocol IMoreMovieViewModel {
 	var releaseDate: String? { get }
 	var title: String? { get }
 	var voteAverage: Double? { get }
-	var voteCount: Int? { get }
 }
 
 struct MoreMovieViewModel {
@@ -28,7 +27,6 @@ struct MoreMovieViewModel {
 	var releaseDate: String?
 	var title: String?
 	var voteAverage: Double?
-	var voteCount: Int?
 }
 
 extension MoreMovieViewModel: IMoreMovieViewModel {
@@ -41,6 +39,5 @@ extension MoreMovieViewModel: IMoreMovieViewModel {
 		releaseDate = item.releaseDate
 		title = item.title
 		voteAverage = item.voteAverage
-		voteCount = item.voteCount
 	}
 }
