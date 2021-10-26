@@ -11,6 +11,7 @@ private enum Constants {
 	static let searchCLVC = "SearchCollectionViewCell"
 	static let searchCollectionReusableView = "SearchCollectionReusableView"
 	static let searchDetailCell = "SearchDetailCell"
+	static let detailVC = "DetailsViewController"
 }
 
 protocol ISearchViewController: AnyObject {
@@ -23,6 +24,7 @@ class SearchViewController: BaseViewController {
 	@IBOutlet weak var searchCollectionView: UICollectionView!
 
 	// MARK: - Variables
+	var coordinators: CoordinatorProtocol?
 	private var data = String()
 	private var searchViewModel: HomeSearchViewModel?
 	var searchController = UISearchController()
@@ -76,7 +78,7 @@ extension SearchViewController: ISearchViewController {
 	}
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return searchViewModel?.searchCount(searchActive, searchViewModel?.searchMovieViewModels ?? [], filter) ?? 0
@@ -109,12 +111,17 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 	}
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension SearchViewController: UICollectionViewDelegate {
-
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		coordinators?.detailViewController()
+		let change = DetailsViewController.fromStoryboard()
+//		change
+		navigationController?.pushViewController(change, animated: true)
+	}
 }
 
-// MARK: UISearchResultsUpdating
+// MARK: - UISearchResultsUpdating
 extension SearchViewController: UISearchResultsUpdating {
 	func updateSearchResults(for searchController: UISearchController) {
 		requestForText(searchController.searchBar.text ?? "")
@@ -139,6 +146,7 @@ extension SearchViewController: UISearchBarDelegate {
 //				}
 //			}
 			searchViewModel?.getSearchMovies(searchText: searchText)
+//			filter = searchViewModel?.getSearchMovies(searchText: searchText)
 		} else {
 			searchActive = false
 			filter.removeAll()
