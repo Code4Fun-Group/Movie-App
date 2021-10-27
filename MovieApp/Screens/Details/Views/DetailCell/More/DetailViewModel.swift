@@ -21,23 +21,21 @@ class DetailViewModel {
 	}
 }
 
-// MARK: - IHomeViewModel
-extension DetailViewModel: IDetailViewModel {
-	func getMovies() {
-		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
-			guard let self = self else { return }
-			switch result {
-			case .success(let movies):
-				self.detailViewModels = movies.compactMap({
-					MovieViewModel(item: $0)
-
-				})
-//				print(movies)
-//				print(self.movieViewModels)
-				self.viewController?.showMovies()
-			case .failure(let error):
-				self.viewController?.showError(error.localizedDescription)
-			}
-		}
-	}
-}
+// MARK: - IDetailViewModel
+//extension DetailViewModel: IDetailViewModel {
+//	func getMovies() {
+//		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
+//			guard let self = self else { return }
+//			switch result {
+//			case .success(let movies):
+//				self.detailViewModels = movies.compactMap({
+//					MovieViewModel(item: $0)
+//
+//				})
+//				self.viewController?.showMovies()
+//			case .failure(let error):
+//				self.viewController?.showError(error.localizedDescription)
+//			}
+//		}
+//	}
+//}

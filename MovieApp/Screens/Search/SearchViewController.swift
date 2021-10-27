@@ -137,16 +137,18 @@ extension SearchViewController: UISearchResultsUpdating {
 
 extension SearchViewController: UISearchBarDelegate {
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+		var pendingRequestWorkItem: DispatchWorkItem?
 		if searchText.isEmpty == false {
 			searchActive = true
 			filter.removeAll()
-//			for item in searchViewModel?.searchMovieViewModels ?? [] {
-//				if item.title?.uppercased().contains(data.uppercased()) == true {
-//					filter = searchViewModel?.searchMovieViewModels.filter { ($0.title ?? "").contains(searchText) } ?? []
-//				}
-//			}
-			searchViewModel?.getSearchMovies(searchText: searchText)
-//			filter = searchViewModel?.getSearchMovies(searchText: searchText)
+			pendingRequestWorkItem?.cancel()
+
+			let requestWorkItem = DispatchWorkItem { [weak self] in
+				self?.searchViewModel?.getSearchMovies(searchText: searchText)
+			}
+
+			pendingRequestWorkItem = requestWorkItem
+			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2500), execute: requestWorkItem)
 		} else {
 			searchActive = false
 			filter.removeAll()
