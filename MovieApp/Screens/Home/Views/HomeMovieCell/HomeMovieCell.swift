@@ -21,11 +21,6 @@ class HomeMovieCell: UITableViewCell {
 	@IBOutlet private weak var addMyListButton: UIButton!
 	@IBOutlet private weak var imageHomeMovieCell: UIImageView!
 
-// MARK: - Life cycles
-	override func awakeFromNib() {
-		super.awakeFromNib()
-	}
-
 // MARK: - configure
 	func configure(cellViewModel: IMovieViewModel?) {
 		titleMovieLabel.text = cellViewModel?.title ?? ""

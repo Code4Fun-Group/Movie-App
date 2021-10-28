@@ -31,7 +31,6 @@ class DownloadViewController: BaseViewController {
 		downloadCollectionView.delegate = self
 		downloadCollectionView.dataSource = self
 		setupUI()
-		setupTableView()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +44,7 @@ class DownloadViewController: BaseViewController {
 private extension DownloadViewController {
 	func setupUI() {
 		self.downloadCollectionView.backgroundColor = .black
+		setupTableView()
 	}
 
 	func setupTableView() {
@@ -53,12 +53,12 @@ private extension DownloadViewController {
 
 	func downloadButton() -> UIButton {
 		let button = UIButton()
-		button.frame = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: 50)
+		button.frame = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: 50.0)
 		button.backgroundColor = .white
 		button.titleLabel?.font = UIFont(name: "Arial", size: 15)
 		button.setTitle("Find Something to Download", for: .normal)
 		button.setTitleColor(UIColor.black, for: .normal)
-		button.layer.cornerRadius = 3
+		button.layer.cornerRadius = 3.0
 		button.center.x = view.center.x
 		button.center.y = 500.0
 //		button.addTarget(self, action: #selector(onSignInPress), for: .touchUpInside)
@@ -67,10 +67,10 @@ private extension DownloadViewController {
 
 	 func imageDownloadView() -> UIImageView {
 		let img = UIImageView()
-		img.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+		img.frame = CGRect(x: 0.0, y: 0,0, width: 200.0, height: 200.0)
 		img.contentMode = .scaleToFill
-		img.layer.cornerRadius = img.frame.size.width / 2
-		img.layer.borderWidth = 3
+		img.layer.cornerRadius = img.frame.size.width / 2.0
+		img.layer.borderWidth = 3.0
 		img.layer.borderColor = UIColor.black.cgColor
 		img.clipsToBounds = true
 		img.image = UIImage(named: "Download Page Icon")
@@ -89,10 +89,6 @@ extension DownloadViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.downloadCollectionView.dequeueReusableCell(withReuseIdentifier: ConstantsCellDownload.downloadCell, for: indexPath) as? DownloadCell else { return UICollectionViewCell() }
 		cell.configure(with: viewModel?.downloadMovieViewModels[indexPath.row])
-		cell.layer.masksToBounds = true
-		cell.layer.cornerRadius = 5
-		cell.layer.borderWidth = 2
-		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
@@ -113,15 +109,15 @@ extension DownloadViewController: IDownloadViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension DownloadViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height / 4 )
+		return CGSize(width: collectionView.frame.width / 3.0, height: collectionView.frame.height / 4.0 )
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 0
+		return 0.0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-		return 0
+		return 0.0
 }
 }
 
