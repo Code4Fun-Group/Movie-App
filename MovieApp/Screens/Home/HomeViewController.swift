@@ -137,7 +137,7 @@ extension HomeViewController: UITableViewDataSource {
 		case 0:
 			return 590.0
 		case 1:
-			return 130.0
+			return 135.0
 		case 2 :
 			return 220.0
 		case 7:
