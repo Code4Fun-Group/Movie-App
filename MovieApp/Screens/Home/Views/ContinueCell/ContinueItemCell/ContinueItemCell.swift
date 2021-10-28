@@ -16,6 +16,10 @@ class ContinueItemCell: UICollectionViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		self.backgroundColor = .black
+		self.layer.masksToBounds = true
+		self.layer.cornerRadius = 5.0
+		self.layer.borderWidth = 2.0
+		self.layer.borderColor = UIColor.white.cgColor
 	}
 	
 // MARK: - configure

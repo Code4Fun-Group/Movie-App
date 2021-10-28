@@ -42,9 +42,6 @@ extension ContinueCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.continueCollectionView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.continueItemCell, for: indexPath) as? ContinueItemCell else { return UICollectionViewCell() }
 		cell.configure(with: continueData[indexPath.row])
-		cell.layer.masksToBounds = true
-		cell.layer.cornerRadius = 5
-		cell.layer.borderWidth = 2
 		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
@@ -53,15 +50,15 @@ extension ContinueCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ContinueCell: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width / 3, height: collectionView.frame.height)
+		return CGSize(width: collectionView.frame.width / 3.0, height: collectionView.frame.height)
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-		return 5
+		return 5.0
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-		return 5
+		return 5.0
 	}
 }
 // MARK: - UICollectionViewDelegate
