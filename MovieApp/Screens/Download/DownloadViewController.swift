@@ -31,7 +31,6 @@ class DownloadViewController: BaseViewController {
 		downloadCollectionView.delegate = self
 		downloadCollectionView.dataSource = self
 		setupUI()
-		setupTableView()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +44,7 @@ class DownloadViewController: BaseViewController {
 private extension DownloadViewController {
 	func setupUI() {
 		self.downloadCollectionView.backgroundColor = .black
+		setupTableView()
 	}
 
 	func setupTableView() {
