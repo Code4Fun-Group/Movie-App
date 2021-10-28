@@ -13,7 +13,7 @@ class ListMovieCell: UITableViewCell {
 	@IBOutlet private weak var collectionListView: UICollectionView!
 
 // MARK: - Variables
-	 weak var delegate: CellDelegate?
+	weak var delegate: CellDelegate?
 	private var listData = [IMovieViewModel]() {
 		didSet {
 			collectionListView.reloadData()
