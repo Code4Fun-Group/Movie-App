@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class DownloadCoordinator: CoordinatorProtocol {
-	// MARK: - Variables
+// MARK: - Variables
 	var navigationController: UINavigationController?
 
 	required init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {

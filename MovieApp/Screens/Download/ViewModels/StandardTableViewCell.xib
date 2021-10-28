@@ -10,21 +10,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="StandardTableViewCell" customModule="MovieApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="377" height="56"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="StandardTableViewCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="377" height="56"/>
+                <rect key="frame" x="0.0" y="0.0" width="390" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw4-3j-Thf">
-                        <rect key="frame" x="15" y="0.0" width="362" height="56"/>
+                        <rect key="frame" x="15" y="0.0" width="375" height="89"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="iw4-3j-Thf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="145-cD-67v"/>
                     <constraint firstAttribute="bottom" secondItem="iw4-3j-Thf" secondAttribute="bottom" id="6WC-XL-ujF"/>
@@ -36,7 +34,7 @@
             <connections>
                 <outlet property="labelStandardCell" destination="iw4-3j-Thf" id="0M2-b7-Kj7"/>
             </connections>
-            <point key="canvasLocation" x="-0.7246376811594204" y="72.991071428571431"/>
+            <point key="canvasLocation" x="8.6956521739130448" y="84.040178571428569"/>
         </tableViewCell>
     </objects>
 </document>

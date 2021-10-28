@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 protocol IMoreViewController: AnyObject {
 	func showMovies()
@@ -15,12 +16,15 @@ protocol IMoreViewController: AnyObject {
 class MoreViewController: BaseViewController {
 // MARK: - Iboutlets
 	@IBOutlet private weak var moreTableView: UITableView!
+
+// MARK: - Variables
 	private var viewModel: MoreViewModel?
 
 // MARK: - Life cycles
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel = MoreViewModel(viewController: self)
+
 		self.moreTableView.delegate = self
 		self.moreTableView.dataSource = self
 		setupUI()
@@ -36,7 +40,6 @@ class MoreViewController: BaseViewController {
 // MARK: - Private function
 private extension MoreViewController {
 	func setupUI() {
-		self.moreTableView.backgroundColor = .black
 	}
 
 	func setupTableView() {
@@ -49,6 +52,7 @@ private extension MoreViewController {
 
 // MARK: - IDownloadViewController
 extension MoreViewController: IMoreViewController {
+
 	func showError(_ errorMessage: String) {
 	}
 
@@ -77,6 +81,7 @@ extension MoreViewController: UITableViewDataSource {
 
 		case .shared:
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.sharedCell) as? SharedTableViewCell else { return UITableViewCell() }
+			cell.viewModel = self
 			return cell
 
 		case .mylist:
@@ -120,4 +125,50 @@ extension MoreViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension MoreViewController: UITableViewDelegate {
+}
+
+extension MoreViewController: sharedDelegate {
+	
+	func sharedAlert() {
+		let alert = UIAlertController(title: "Copy Link ", message: " You have copied successfully ", preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "OK", style: .cancel)
+		alert.addAction(okAction)
+		present(alert, animated: true)
+	}
+
+	 func sharedFacebook() {
+		view.reloadInputViews()
+		guard let url = URL(string: "ms-facebook://") else { return }
+		if UIApplication.shared.canOpenURL(url) {
+			UIApplication.shared.open(url, options: [:], completionHandler: nil)
+		} else {
+			let view = SKStoreProductViewController()
+			view.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: NSNumber(value: 284882215)], completionBlock: nil)
+			self.navigationController?.present(view, animated: true, completion: nil)
+		}
+	}
+	
+	func sharedGmail() {
+	   view.reloadInputViews()
+	   guard let url = URL(string: "ms-gmail://") else { return }
+	   if UIApplication.shared.canOpenURL(url) {
+		   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+	   } else {
+		   let view = SKStoreProductViewController()
+		   view.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: NSNumber(value: 422689480)], completionBlock: nil)
+		   self.navigationController?.present(view, animated: true, completion: nil)
+	   }
+	}
+
+	func sharedWhatApps() {
+	   view.reloadInputViews()
+	   guard let url = URL(string: "ms-whatapps://") else { return }
+	   if UIApplication.shared.canOpenURL(url) {
+		   UIApplication.shared.open(url, options: [:], completionHandler: nil)
+	   } else {
+		   let view = SKStoreProductViewController()
+		   view.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: NSNumber(value: 310633997)], completionBlock: nil)
+		   self.navigationController?.present(view, animated: true, completion: nil)
+	   }
+	}
 }

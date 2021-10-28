@@ -7,6 +7,15 @@
 
 import UIKit
 
+private enum Constants {
+	static let homeMovieCell = "HomeMovieCell"
+	static let previewMovieCell = "PreviewCell"
+	static let continueMovieCell = "ContinueCell"
+	static let listMovieCell = "ListMovieCell"
+	static let tvShowMovieCell = "TvShowViewCell"
+	static let detailViewController = "DetailsViewController"
+}
+
 protocol IHomeViewController: AnyObject {
 	func showMovies()
 	func showError(_ errorMessage: String)
@@ -65,7 +74,7 @@ extension HomeViewController: IHomeViewController {
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return CaseCell.allCases.count
+		return viewModel?.sections.count ?? 0
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,36 +82,53 @@ extension HomeViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let tabCell = CaseCell.allCases[indexPath.section]
+		let tabCell = viewModel?.sections[indexPath.section]
 		switch tabCell {
-		case .home:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.homeMovieCell) as? HomeMovieCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: viewModel?.movieViewModels.randomElement())
+		case .home(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? HomeMovieCell else { return UITableViewCell() }
+			cell.configure(with: viewModel?.movieViewModels.randomElement())
 			return cell
 
-		case .preview:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.previewMovieCell) as? PreviewCell else { return UITableViewCell() }
+		case .preview(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? PreviewCell else { return UITableViewCell() }
 			cell.configure(preview: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
 
-		case .continueCell:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.continueMovieCell) as? ContinueCell else { return UITableViewCell() }
+		case .continueCell(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? ContinueCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
 
-		case .list:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
+		case .list(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
-			
-		default:
-			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: Constants.listMovieCell) as? ListMovieCell else { return UITableViewCell() }
+		case .europe(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? ListMovieCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels ?? [])
 			cell.delegate = self
 			return cell
+
+		case .action(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? ListMovieCell else { return UITableViewCell() }
+			cell.configure(with: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
+			return cell
+		case .romance(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? ListMovieCell else { return UITableViewCell() }
+			cell.configure(with: viewModel?.movieViewModels ?? [])
+			cell.delegate = self
+			return cell
+		case .tvShow(let identifer, _):
+			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? TvShowViewCell else { return UITableViewCell() }
+			cell.configure(with: viewModel?.movieViewModels.randomElement())
+//			cell.delegate = self
+			return cell
+		case .none:
+			return UITableViewCell()
 		}
 	}
 
@@ -114,38 +140,40 @@ extension HomeViewController: UITableViewDataSource {
 			return 130.0
 		case 2 :
 			return 220.0
+		case 7:
+			return 300.0
 		default:
 			return 200.0
 		}
 	}
-
-	 func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		if section == 0 {
-			return 0.0
-		} else {
-			return 40.0
-		}
-	}
-
-	 func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-		if section == 0 {
-			let view = UIView()
-			return view
-		} else {
-			let headerView = UIView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: tableView.frame.width, height: 40.0))
-			headerView.backgroundColor = .black
-			let label = UILabel()
-			label.frame = CGRect.init(x: 10.0, y: 0.0, width: headerView.frame.width - 10.0, height: headerView.frame.height)
-			label.font = UIFont(name: "HelveticaNeue-Bold", size: 35.0)
-			label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-			headerView.addSubview(label)
-			headerView.clearsContextBeforeDrawing = true
-			var header = [String]()
-			for item in CaseCell.allCases {
-				header.append(item.title())
-			}
-			label.text = header[section]
-			return headerView
+	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		   if section == 0 {
+			   return 0.0
+		   } else {
+			   return 40.0
+		   }
+	   }
+	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		let tabCells = viewModel?.sections[section]
+		switch tabCells {
+		case .home( _, let title):
+			return title
+		case .preview( _, let title):
+			return title
+		case .continueCell( _, let title):
+			return title
+		case .list( _, let title):
+			return title
+		case .europe( _, let title):
+			return title
+		case .action( _, let title):
+			return title
+		case .romance( _, let title):
+			return title
+		case .tvShow( _, let title):
+			return title
+		default:
+			return ""
 		}
 	}
 }

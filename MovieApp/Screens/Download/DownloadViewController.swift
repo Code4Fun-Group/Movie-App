@@ -44,7 +44,6 @@ class DownloadViewController: BaseViewController {
 // MARK: - Private function
 private extension DownloadViewController {
 	func setupUI() {
-		self.downloadCollectionView.backgroundColor = .black
 	}
 
 	func setupTableView() {
@@ -118,6 +117,7 @@ extension DownloadViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 0.0
 }
+
 }
 
 // MARK: - UICollectionViewDelegate

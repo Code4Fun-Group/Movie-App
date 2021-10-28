@@ -7,6 +7,10 @@
 
 import UIKit
 
+private enum ConstantsCell {
+	static let previewCollectionCell = "PreviewCollectionViewCell"
+}
+
 protocol CellDelegate: AnyObject {
 	func goDetailView(celldata: IMovieViewModel)
 }
@@ -29,7 +33,6 @@ class PreviewCell: UITableViewCell {
 		previewCollectionView.delegate = self
 		previewCollectionView.dataSource = self
 		previewCollectionView.register(UINib(nibName: ConstantsCell.previewCollectionCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCell.previewCollectionCell)
-		self.backgroundColor = .black
 	}
 
 // MARK: - Life cycles

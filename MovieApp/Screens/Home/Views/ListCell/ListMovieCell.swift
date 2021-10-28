@@ -8,6 +8,10 @@
 import UIKit
 import Model
 
+private enum ConstantsCell {
+	static let listItemCell = "ListItemCell"
+}
+
 class ListMovieCell: UITableViewCell {
 // MARK: - Outlets
 	@IBOutlet private weak var collectionListView: UICollectionView!

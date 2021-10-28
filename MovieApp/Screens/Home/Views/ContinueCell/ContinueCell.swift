@@ -7,6 +7,10 @@
 
 import UIKit
 
+private enum ConstantsCell {
+	static let continueItemCell = "ContinueItemCell"
+}
+
 class ContinueCell: UITableViewCell {
 // MARK: - IBOutlets
 	@IBOutlet weak var continueCollectionView: UICollectionView!
@@ -60,6 +64,7 @@ extension ContinueCell: UICollectionViewDelegateFlowLayout {
 		return 5.0
 	}
 }
+
 // MARK: - UICollectionViewDelegate
 extension ContinueCell: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

@@ -31,6 +31,8 @@ class ProfileTableViewCell: UITableViewCell {
 // MARK: - LifeCycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
+		self.managerButton.titleLabel?.text = "Mannger Profile"
+		self.managerButton.titleLabel?.textColor = .black
 		self.profileItem.delegate = self
 		self.profileItem.dataSource = self
 		profileItem.register(UINib(nibName: ConstantsCellProfile.profileItemCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCellProfile.profileItemCell)
