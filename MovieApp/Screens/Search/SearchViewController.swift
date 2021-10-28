@@ -144,7 +144,7 @@ extension SearchViewController: UISearchBarDelegate {
 			pendingRequestWorkItem?.cancel()
 
 			let requestWorkItem = DispatchWorkItem { [weak self] in
-				self?.searchViewModel?.getSearchMovies(searchText: searchText)
+				self?.searchViewModel?.getSearchMovies(searchText: "Logan")
 			}
 
 			pendingRequestWorkItem = requestWorkItem
