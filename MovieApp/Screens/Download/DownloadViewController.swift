@@ -67,7 +67,7 @@ private extension DownloadViewController {
 
 	 func imageDownloadView() -> UIImageView {
 		let img = UIImageView()
-		img.frame = CGRect(x: 0.0, y: 0,0, width: 200.0, height: 200.0)
+		img.frame = CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0)
 		img.contentMode = .scaleToFill
 		img.layer.cornerRadius = img.frame.size.width / 2.0
 		img.layer.borderWidth = 3.0
