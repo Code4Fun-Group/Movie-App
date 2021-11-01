@@ -30,7 +30,7 @@ extension MoreViewModel: IMoreViewModel {
 			.appsetting(identifer: "StandardTableViewCell", title: "AppSetting"),
 			.account(identifer: "StandardTableViewCell", title: "Account"),
 			.help(identifer: "StandardTableViewCell", title: "Help"),
-			.signout(identifer: "StandardTableViewCell", title: "Sign")
+			.signout(identifer: "StandardTableViewCell", title: "SignOut")
 		]
 	}
 	func getMore() {
