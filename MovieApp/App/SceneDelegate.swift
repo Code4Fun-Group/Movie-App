@@ -52,6 +52,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 	private func configureRootVC(with scene: UIWindowScene) {
 		window = UIWindow(windowScene: scene)
+		window?.overrideUserInterfaceStyle = .dark
 		coordinator = AppCoordinator(window, navigationController: UINavigationController())
 		coordinator?.tabbarController()
 	}

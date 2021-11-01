@@ -8,6 +8,7 @@
 import Foundation
 
 protocol IMoreViewModel {
+	var sectionsMore: [MoreCell] { get }
 	func getMore()
 }
 
@@ -21,6 +22,17 @@ class MoreViewModel {
 
 // MARK: - IMoreViewModel
 extension MoreViewModel: IMoreViewModel {
+	var sectionsMore: [MoreCell] {
+		return [
+			.profile(identifer: "ProfileTableViewCell", title: "Profile"),
+			.shared(identifer: "SharedTableViewCell", title : "Shared"),
+			.mylist(identifer: "MyListTableViewCell", title: "MyList"),
+			.appsetting(identifer: "StandardTableViewCell", title: "AppSetting"),
+			.account(identifer: "StandardTableViewCell", title: "Account"),
+			.help(identifer: "StandardTableViewCell", title: "Help"),
+			.signout(identifer: "StandardTableViewCell", title: "Sign")
+		]
+	}
 	func getMore() {
 		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
 			guard let self = self else { return }

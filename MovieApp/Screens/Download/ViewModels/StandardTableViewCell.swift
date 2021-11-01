@@ -15,7 +15,6 @@ class StandardTableViewCell: UITableViewCell {
 // MARK: - Life Cycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		labelStandardCell.textColor = .none
 }
 // MARK: - configure
 	func configure(cellViewModel: String) {

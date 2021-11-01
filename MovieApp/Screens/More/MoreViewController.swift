@@ -8,6 +8,13 @@
 import UIKit
 import StoreKit
 
+private enum ConstantsCellMore {
+	static let profileCell = "ProfileTableViewCell"
+	static let sharedCell = "SharedTableViewCell"
+	static let myListCell = "MyListTableViewCell"
+	static let standardCell = "StandardTableViewCell"
+}
+
 protocol IMoreViewController: AnyObject {
 	func showMovies()
 	func showError(_ errorMessage: String)
@@ -24,10 +31,8 @@ class MoreViewController: BaseViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		viewModel = MoreViewModel(viewController: self)
-
 		self.moreTableView.delegate = self
 		self.moreTableView.dataSource = self
-		setupUI()
 		setupTableView()
 	}
 
@@ -39,8 +44,6 @@ class MoreViewController: BaseViewController {
 
 // MARK: - Private function
 private extension MoreViewController {
-	func setupUI() {
-	}
 
 	func setupTableView() {
 		moreTableView.register(UINib(nibName: ConstantsCellMore.profileCell, bundle: Bundle.main), forCellReuseIdentifier: ConstantsCellMore.profileCell)
@@ -54,6 +57,7 @@ private extension MoreViewController {
 extension MoreViewController: IMoreViewController {
 
 	func showError(_ errorMessage: String) {
+		print(errorMessage)
 	}
 
 	func showMovies() {
@@ -64,7 +68,7 @@ extension MoreViewController: IMoreViewController {
 // MARK: - UITableViewDataSource
 extension MoreViewController: UITableViewDataSource {
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return MoreCell.allCases.count
+		return viewModel?.sectionsMore.count ?? 0
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,42 +76,44 @@ extension MoreViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let tabCell = MoreCell.allCases[indexPath.section]
+		let tabCell = viewModel?.sectionsMore[indexPath.section]
 		switch tabCell {
-		case .detail:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.profileCell) as? ProfileTableViewCell else { return UITableViewCell() }
+		case .profile(let identifer, _):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? ProfileTableViewCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.moreViewModels ?? [])
 			return cell
 
-		case .shared:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.sharedCell) as? SharedTableViewCell else { return UITableViewCell() }
+		case .shared(let identifer, _):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? SharedTableViewCell else { return UITableViewCell() }
 			cell.viewModel = self
 			return cell
 
-		case .mylist:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.myListCell) as? MyListTableViewCell else { return UITableViewCell() }
+		case .mylist(let identifer, _):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? MyListTableViewCell else { return UITableViewCell() }
 			return cell
 
-		case .appsetting:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: MoreCell.title(MoreCell.appsetting)())
+		case .appsetting(let identifer, let title):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? StandardTableViewCell else { return UITableViewCell() }
+			cell.configure(cellViewModel: title)
 			return cell
 
-		case .account:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: MoreCell.title(MoreCell.account)())
+		case .account(let identifer, let title):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? StandardTableViewCell else { return UITableViewCell() }
+			cell.configure(cellViewModel: title)
 			return cell
 
-		case .help:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: MoreCell.title(MoreCell.help)())
+		case .help(let identifer, let title):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? StandardTableViewCell else { return UITableViewCell() }
+			cell.configure(cellViewModel: title)
 			return cell
 
-		case .signout:
-			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: ConstantsCellMore.standardCell) as? StandardTableViewCell else { return UITableViewCell() }
-			cell.configure(cellViewModel: MoreCell.title(MoreCell.signout)())
+		case .signout(let identifer, let title):
+			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? StandardTableViewCell else { return UITableViewCell() }
+			cell.configure(cellViewModel: title)
 			return cell
 			
+		case .none:
+			return UITableViewCell()
 		}
 	}
 
