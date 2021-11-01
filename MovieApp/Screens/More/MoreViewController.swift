@@ -20,6 +20,11 @@ protocol IMoreViewController: AnyObject {
 	func showError(_ errorMessage: String)
 }
 
+protocol IMoreViewController: AnyObject {
+	func showMovies()
+	func showError(_ errorMessage: String)
+}
+
 class MoreViewController: BaseViewController {
 // MARK: - Iboutlets
 	@IBOutlet private weak var moreTableView: UITableView!

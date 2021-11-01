@@ -10,7 +10,6 @@ import UIKit
 private enum ConstantsCell {
 	static let previewCollectionCell = "PreviewCollectionViewCell"
 }
-
 protocol CellDelegate: AnyObject {
 	func goDetailView(celldata: IMovieViewModel)
 }

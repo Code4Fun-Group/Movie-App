@@ -19,7 +19,6 @@ class DownloadCell: UICollectionViewCell {
 		self.layer.borderWidth = 2.0
 		self.layer.borderColor = UIColor.white.cgColor
 		}
-
 // MARK: - functions
 	func configure(with listItem: IDownloadMovieViewModel?) {
 		imageDownloadCell.linkDownloaded(from: listItem?.posterPath ?? "" )

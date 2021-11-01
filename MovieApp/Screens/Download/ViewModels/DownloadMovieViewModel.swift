@@ -5,6 +5,7 @@
 //  Created by MinhDev on 10/19/21.
 //
 
+import UIKit
 import Model
 
 protocol IDownloadMovieViewModel {

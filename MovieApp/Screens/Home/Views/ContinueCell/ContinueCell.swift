@@ -46,6 +46,7 @@ extension ContinueCell: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = self.continueCollectionView.dequeueReusableCell(withReuseIdentifier: ConstantsCell.continueItemCell, for: indexPath) as? ContinueItemCell else { return UICollectionViewCell() }
 		cell.configure(with: continueData[indexPath.row])
+		cell.layer.borderColor = UIColor.white.cgColor
 		return cell
 	}
 }
