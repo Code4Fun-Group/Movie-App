@@ -143,7 +143,6 @@ extension MoreViewController: sharedDelegate {
 	}
 
 	 func sharedFacebook() {
-		view.reloadInputViews()
 		guard let url = URL(string: "ms-facebook://") else { return }
 		if UIApplication.shared.canOpenURL(url) {
 			UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -155,7 +154,6 @@ extension MoreViewController: sharedDelegate {
 	}
 	
 	func sharedGmail() {
-	   view.reloadInputViews()
 	   guard let url = URL(string: "ms-gmail://") else { return }
 	   if UIApplication.shared.canOpenURL(url) {
 		   UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -167,7 +165,6 @@ extension MoreViewController: sharedDelegate {
 	}
 
 	func sharedWhatApps() {
-	   view.reloadInputViews()
 	   guard let url = URL(string: "ms-whatapps://") else { return }
 	   if UIApplication.shared.canOpenURL(url) {
 		   UIApplication.shared.open(url, options: [:], completionHandler: nil)

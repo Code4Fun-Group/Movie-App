@@ -544,11 +544,11 @@
 		046BD74D2730F0BB0089C5B0 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				046BD74E2730F0BB0089C5B0 /* ViewModel */,
 				046BD7512730F0BB0089C5B0 /* MoreViewController.swift */,
 				046BD7522730F0BB0089C5B0 /* MoreViewController.storyboard */,
-				046BD7532730F0BB0089C5B0 /* Models */,
 				046BD7562730F0BB0089C5B0 /* MoreCoodinator.swift */,
+				046BD74E2730F0BB0089C5B0 /* ViewModel */,
+				046BD7532730F0BB0089C5B0 /* Models */,
 				046BD7572730F0BB0089C5B0 /* Views */,
 			);
 			path = More;
