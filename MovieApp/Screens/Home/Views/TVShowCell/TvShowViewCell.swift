@@ -15,9 +15,9 @@ class TvShowViewCell: UITableViewCell {
 	@IBOutlet private weak var playTvShowButton: UIButton!
 	@IBOutlet private weak var myListTvShowButton: UIButton!
 
-	// MARK: - configure
-		func configure(with cellViewModel: IMovieViewModel?) {
-			titleTvShow.text = cellViewModel?.title ?? ""
-			imageTvShow.linkDownloaded(from: cellViewModel?.backdropPath ?? "")
-		}
+// MARK: - configure
+	func configure(with cellViewModel: IMovieViewModel?) {
+		titleTvShow.text = cellViewModel?.title ?? ""
+		imageTvShow.linkDownloaded(from: cellViewModel?.backdropPath ?? "")
+	}
 }

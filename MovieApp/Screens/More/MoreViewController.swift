@@ -33,7 +33,7 @@ class MoreViewController: BaseViewController {
 		viewModel = MoreViewModel(viewController: self)
 		self.moreTableView.delegate = self
 		self.moreTableView.dataSource = self
-		setupTableView()
+		setupUI()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +45,7 @@ class MoreViewController: BaseViewController {
 // MARK: - Private function
 private extension MoreViewController {
 
-	func setupTableView() {
+	func setupUI() {
 		moreTableView.register(UINib(nibName: ConstantsCellMore.profileCell, bundle: Bundle.main), forCellReuseIdentifier: ConstantsCellMore.profileCell)
 		moreTableView.register(UINib(nibName: ConstantsCellMore.sharedCell, bundle: Bundle.main), forCellReuseIdentifier: ConstantsCellMore.sharedCell)
 		moreTableView.register(UINib(nibName: ConstantsCellMore.myListCell, bundle: Bundle.main), forCellReuseIdentifier: ConstantsCellMore.myListCell)

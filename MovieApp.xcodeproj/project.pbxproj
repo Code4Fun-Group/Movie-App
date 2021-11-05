@@ -90,9 +90,6 @@
 		046BD7CD2730F0BB0089C5B0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7482730F0BB0089C5B0 /* DetailsViewController.swift */; };
 		046BD7CE2730F0BB0089C5B0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7482730F0BB0089C5B0 /* DetailsViewController.swift */; };
 		046BD7CF2730F0BB0089C5B0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7482730F0BB0089C5B0 /* DetailsViewController.swift */; };
-		046BD7D02730F0BB0089C5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD74A2730F0BB0089C5B0 /* Main.storyboard */; };
-		046BD7D12730F0BB0089C5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD74A2730F0BB0089C5B0 /* Main.storyboard */; };
-		046BD7D22730F0BB0089C5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD74A2730F0BB0089C5B0 /* Main.storyboard */; };
 		046BD7D32730F0BB0089C5B0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD74B2730F0BB0089C5B0 /* TabbarViewController.swift */; };
 		046BD7D42730F0BB0089C5B0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD74B2730F0BB0089C5B0 /* TabbarViewController.swift */; };
 		046BD7D52730F0BB0089C5B0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD74B2730F0BB0089C5B0 /* TabbarViewController.swift */; };
@@ -248,7 +245,6 @@
 		046BD7442730F0BB0089C5B0 /* ContinueItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContinueItemCell.xib; sourceTree = "<group>"; };
 		046BD7472730F0BB0089C5B0 /* DetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsViewController.storyboard; sourceTree = "<group>"; };
 		046BD7482730F0BB0089C5B0 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		046BD74A2730F0BB0089C5B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		046BD74B2730F0BB0089C5B0 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		046BD74C2730F0BB0089C5B0 /* TabbarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabbarViewController.storyboard; sourceTree = "<group>"; };
 		046BD74F2730F0BB0089C5B0 /* MoreFileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreFileViewModel.swift; sourceTree = "<group>"; };
@@ -534,7 +530,6 @@
 		046BD7492730F0BB0089C5B0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				046BD74A2730F0BB0089C5B0 /* Main.storyboard */,
 				046BD74B2730F0BB0089C5B0 /* TabbarViewController.swift */,
 				046BD74C2730F0BB0089C5B0 /* TabbarViewController.storyboard */,
 			);
@@ -980,7 +975,6 @@
 				046BD8342730F0BB0089C5B0 /* ComingSoonViewController.storyboard in Resources */,
 				046BD7D72730F0BB0089C5B0 /* TabbarViewController.storyboard in Resources */,
 				046BD7E32730F0BB0089C5B0 /* MoreViewController.storyboard in Resources */,
-				046BD7D12730F0BB0089C5B0 /* Main.storyboard in Resources */,
 				046BD7922730F0BB0089C5B0 /* HomeViewController.storyboard in Resources */,
 				046BD7B32730F0BB0089C5B0 /* PreviewCell.xib in Resources */,
 				046BD7BF2730F0BB0089C5B0 /* ContinueCell.xib in Resources */,
@@ -1009,7 +1003,6 @@
 				046BD8352730F0BB0089C5B0 /* ComingSoonViewController.storyboard in Resources */,
 				046BD7D82730F0BB0089C5B0 /* TabbarViewController.storyboard in Resources */,
 				046BD7E42730F0BB0089C5B0 /* MoreViewController.storyboard in Resources */,
-				046BD7D22730F0BB0089C5B0 /* Main.storyboard in Resources */,
 				046BD7932730F0BB0089C5B0 /* HomeViewController.storyboard in Resources */,
 				046BD7B42730F0BB0089C5B0 /* PreviewCell.xib in Resources */,
 				046BD7C02730F0BB0089C5B0 /* ContinueCell.xib in Resources */,
@@ -1036,7 +1029,6 @@
 				046BD8032730F0BB0089C5B0 /* SharedTableViewCell.xib in Resources */,
 				046BD7B82730F0BB0089C5B0 /* HomeMovieCell.xib in Resources */,
 				046BD8062730F0BB0089C5B0 /* StandardTableViewCell.xib in Resources */,
-				046BD7D02730F0BB0089C5B0 /* Main.storyboard in Resources */,
 				046BD8332730F0BB0089C5B0 /* ComingSoonViewController.storyboard in Resources */,
 				046BD7972730F0BB0089C5B0 /* ListItemCell.xib in Resources */,
 				046BD8212730F0BB0089C5B0 /* DownloadViewController.storyboard in Resources */,

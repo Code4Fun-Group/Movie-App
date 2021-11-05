@@ -132,14 +132,15 @@ extension HomeViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		switch indexPath.section {
-		case 0:
+		let tabCell = viewModel?.sections[indexPath.section]
+		switch tabCell {
+		case .home:
 			return Constants.heightHome
-		case 1:
+		case .preview:
 			return Constants.heightPre
-		case 2...6 :
+		case .list:
 			return Constants.heightList
-		case 7:
+		case .tvShow:
 			return Constants.heightTvShow
 		default:
 			return Constants.heightList
