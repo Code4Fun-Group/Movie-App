@@ -16,9 +16,9 @@ private enum Constants {
 	static let detailViewController = "DetailsViewController"
 	static let heightHome: CGFloat = 590.0
 	static let heightPre: CGFloat = 130.0
-	static let heightList: CGFloat = 300.0
+	static let heightList: CGFloat = 220.0
 	static let heightTvShow: CGFloat = 300.0
-	static let heightTitle: CGFloat = 220.0
+	static let heightTitle: CGFloat = 40.0
 }
 
 protocol IHomeViewController: AnyObject {
