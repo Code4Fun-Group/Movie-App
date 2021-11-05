@@ -57,15 +57,15 @@ extension PreviewCell: UICollectionViewDataSource {
 extension PreviewCell: UICollectionViewDelegateFlowLayout {
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-	return CGSize(width: contentView.bounds.size.width / 3.0, height: contentView.bounds.size.height)
+	return CGSize(width: contentView.bounds.size.width / ConstraintCells.sizeItem, height: contentView.bounds.size.height)
 }
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-	return 10.0
+	return ConstraintCells.lineSpace
 }
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-	return 10.0
+	return ConstraintCells.interItem
 }
 }
 

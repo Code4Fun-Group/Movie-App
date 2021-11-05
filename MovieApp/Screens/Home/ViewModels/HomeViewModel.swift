@@ -10,7 +10,6 @@ import Model
 
 protocol IHomeViewModel {
 	var sections: [CaseCell] { get }
-
 	func getListMovies()
 }
 class HomeViewModel {

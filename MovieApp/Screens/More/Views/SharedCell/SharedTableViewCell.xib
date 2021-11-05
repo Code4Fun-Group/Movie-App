@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,14 +31,14 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="coppyButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TWD-GJ-yfl"/>
+                                    <action selector="coppyButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eC3-pU-UtX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-MV-491">
                                 <rect key="frame" x="22" y="133" width="39" height="32"/>
                                 <state key="normal" image="WhatsApp"/>
                                 <connections>
-                                    <action selector="sharedWhatAppAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NEt-5M-B27"/>
+                                    <action selector="sharedWhatAppAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zjz-V7-DId"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaB-Tk-mdF">
@@ -50,7 +49,7 @@
                                 <rect key="frame" x="106" y="128" width="42" height="42"/>
                                 <state key="normal" image="Face Book"/>
                                 <connections>
-                                    <action selector="sharedFacebookAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bB3-fS-G1s"/>
+                                    <action selector="sharedFacebookAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="06E-wR-c6I"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCA-C8-Zof">
@@ -120,7 +119,7 @@
                                 </constraints>
                                 <state key="normal" image="Gmail"/>
                                 <connections>
-                                    <action selector="sharedGmailAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k59-qx-ah4"/>
+                                    <action selector="sharedGmailAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7b9-U8-mFR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcF-Ec-xjN">
@@ -201,15 +200,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="copyButton" destination="GfJ-co-f2v" id="erj-pg-Nvf"/>
-                <outlet property="facebookButton" destination="Mni-jc-qdx" id="CBG-Kw-mgH"/>
-                <outlet property="labelShared1" destination="Ya2-SQ-yBf" id="g6G-Ue-CAw"/>
-                <outlet property="labelShared2" destination="d9I-Fb-DP1" id="F5d-5L-CoD"/>
-                <outlet property="labelShared3" destination="RHf-d6-a2O" id="vt0-n0-Hf3"/>
-                <outlet property="mailButton" destination="V1S-fk-bgT" id="xaK-Hk-5xL"/>
-                <outlet property="moreButton" destination="FcF-Ec-xjN" id="sFS-JF-ygQ"/>
-                <outlet property="textShared" destination="Roo-7e-QF0" id="LDn-jC-qbe"/>
-                <outlet property="whatappButton" destination="NSg-MV-491" id="6gP-Zi-uoo"/>
+                <outlet property="copyButton" destination="GfJ-co-f2v" id="mgu-Fo-Eem"/>
+                <outlet property="facebookButton" destination="Mni-jc-qdx" id="Bqb-bn-CYw"/>
+                <outlet property="labelSharedBody" destination="d9I-Fb-DP1" id="efJ-BQ-w7j"/>
+                <outlet property="labelSharedEnd" destination="RHf-d6-a2O" id="WnU-KL-MIZ"/>
+                <outlet property="labelSharedTitle" destination="Ya2-SQ-yBf" id="ybe-F6-LKk"/>
+                <outlet property="mailButton" destination="V1S-fk-bgT" id="80j-Tf-FT3"/>
+                <outlet property="moreButton" destination="FcF-Ec-xjN" id="sGG-kt-M77"/>
+                <outlet property="textShared" destination="Roo-7e-QF0" id="lBt-5O-R0I"/>
+                <outlet property="whatappButton" destination="NSg-MV-491" id="mKl-fx-Rbb"/>
             </connections>
             <point key="canvasLocation" x="-7.2463768115942031" y="-5.0223214285714279"/>
         </tableViewCell>

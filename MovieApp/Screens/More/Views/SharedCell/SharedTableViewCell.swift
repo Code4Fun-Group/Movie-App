@@ -17,9 +17,9 @@ protocol sharedDelegate: AnyObject {
 class SharedTableViewCell: UITableViewCell {
 
 // MARK: - Iboutlets
-	@IBOutlet private weak var labelShared1: UILabel!
-	@IBOutlet private weak var labelShared2: UILabel!
-	@IBOutlet private weak var labelShared3: UILabel!
+	@IBOutlet private weak var labelSharedTitle: UILabel!
+	@IBOutlet private weak var labelSharedBody: UILabel!
+	@IBOutlet private weak var labelSharedEnd: UILabel!
 	@IBOutlet private weak var copyButton: UIButton!
 	@IBOutlet private weak var textShared: UITextField!
 	@IBOutlet private weak var moreButton: UIButton!
@@ -32,11 +32,10 @@ class SharedTableViewCell: UITableViewCell {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		setUpUI()
-		setUpbutton()
 	}
 
 // MARK: - Actions
-	@IBAction private func coppyButtonAction(_ sender: UIButton) {
+	@IBAction private func coppyButtonAction(_ sender: UIButton!) {
 		viewModel?.sharedAlert()
 		UIPasteboard.general.string = textShared.text
 	}
@@ -54,18 +53,19 @@ class SharedTableViewCell: UITableViewCell {
 	extension SharedTableViewCell {
 		private func setUpUI() {
 			textShared.text = "https://code4fun.group/movies"
-			labelShared1.text = "Tell friends about Netflix."
-			labelShared2.text = "Share this link so your friends can join the conversation around all your favorite TV shows and movies."
-			labelShared3.text = "Terms & condition"
+			labelSharedTitle.text = "Tell friends about Netflix."
+			labelSharedBody.text = "Share this link so your friends can join the conversation around all your favorite TV shows and movies."
+			labelSharedEnd.text = "Terms & condition"
+			setUpbutton()
 		}
 		private func setUpbutton() {
 			self.copyButton.layer.masksToBounds = true
-			self.copyButton.layer.cornerRadius = 5.0
-			self.copyButton.layer.borderWidth = 2.0
+			self.copyButton.layer.cornerRadius = ConstraintCells.cornerRadius
+			self.copyButton.layer.borderWidth = ConstraintCells.borderWidth
 			self.copyButton.layer.borderColor = UIColor.white.cgColor
 			self.textShared.layer.masksToBounds = true
-			self.textShared.layer.cornerRadius = 5.0
-			self.textShared.layer.borderWidth = 2.0
+			self.textShared.layer.cornerRadius = ConstraintCells.cornerRadius
+			self.textShared.layer.borderWidth = ConstraintCells.borderWidth
 			self.textShared.layer.borderColor = UIColor.white.cgColor
 		}
 	}

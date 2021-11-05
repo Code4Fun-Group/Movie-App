@@ -12,10 +12,6 @@ class StandardTableViewCell: UITableViewCell {
 // MARK: - Iboutlets
 	@IBOutlet private weak var labelStandardCell: UILabel!
 
-// MARK: - Life Cycle
-	override func awakeFromNib() {
-		super.awakeFromNib()
-}
 // MARK: - configure
 	func configure(cellViewModel: String) {
 		labelStandardCell.text = cellViewModel

@@ -21,6 +21,7 @@ def common
 	pod 'Common', :path => './Modules/Common'
 	pod 'Networking', :path => './Modules/Networking'
 	pod 'Model', :path => './Modules/Model'
+	pod 'RealmSwift', '~>10'
 end
 
 def xctools

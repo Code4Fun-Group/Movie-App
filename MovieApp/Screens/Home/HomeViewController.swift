@@ -14,6 +14,11 @@ private enum Constants {
 	static let listMovieCell = "ListMovieCell"
 	static let tvShowMovieCell = "TvShowViewCell"
 	static let detailViewController = "DetailsViewController"
+	static let heightHome: CGFloat = 590.0
+	static let heightPre: CGFloat = 130.0
+	static let heightList: CGFloat = 300.0
+	static let heightTvShow: CGFloat = 300.0
+	static let heightTitle: CGFloat = 220.0
 }
 
 protocol IHomeViewController: AnyObject {
@@ -36,7 +41,6 @@ class HomeViewController: BaseViewController {
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
 		setupUI()
-		setupTableView()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -48,10 +52,6 @@ class HomeViewController: BaseViewController {
 // MARK: - Private function
 private extension HomeViewController {
 	func setupUI() {
-		self.tableView.backgroundColor = .clear
-	}
-	
-	func setupTableView() {
 		tableView.register(UINib(nibName: Constants.homeMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.homeMovieCell)
 		tableView.register(UINib(nibName: Constants.previewMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.previewMovieCell)
 		tableView.register(UINib(nibName: Constants.continueMovieCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.continueMovieCell)
@@ -125,7 +125,6 @@ extension HomeViewController: UITableViewDataSource {
 		case .tvShow(let identifer, _):
 			guard let cell = self.tableView.dequeueReusableCell(withIdentifier: identifer) as? TvShowViewCell else { return UITableViewCell() }
 			cell.configure(with: viewModel?.movieViewModels.randomElement())
-//			cell.delegate = self
 			return cell
 		case .none:
 			return UITableViewCell()
@@ -135,22 +134,22 @@ extension HomeViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		switch indexPath.section {
 		case 0:
-			return 590.0
+			return Constants.heightHome
 		case 1:
-			return 130.0
-		case 2 :
-			return 220.0
+			return Constants.heightPre
+		case 2...6 :
+			return Constants.heightList
 		case 7:
-			return 300.0
+			return Constants.heightTvShow
 		default:
-			return 200.0
+			return Constants.heightList
 		}
 	}
 	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		   if section == 0 {
 			   return 0.0
 		   } else {
-			   return 40.0
+			return Constants.heightTitle
 		   }
 	   }
 	func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

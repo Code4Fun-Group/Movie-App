@@ -16,8 +16,8 @@ class ProfileItemCell: UICollectionViewCell {
 		super.awakeFromNib()
 		imageProfile.image = UIImage(named: "Logo")
 		self.layer.masksToBounds = true
-		self.layer.cornerRadius = 5.0
-		self.layer.borderWidth = 2.0
+		self.layer.cornerRadius = ConstraintCells.cornerRadius
+		self.layer.borderWidth = ConstraintCells.borderWidth
 		self.layer.borderColor = UIColor.white.cgColor
 	}
 	
