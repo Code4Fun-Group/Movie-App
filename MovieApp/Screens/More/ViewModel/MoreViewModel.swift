@@ -8,18 +8,43 @@
 import Foundation
 
 protocol IMoreViewModel {
-	func getMovies()
+	var sectionsMore: [MoreCell] { get }
+	func getMore()
 }
 
 class MoreViewModel {
 	weak var viewController: IMoreViewController?
-	var movieViewModels = [MovieViewModel]()
+	var moreViewModels = [MoreMovieViewModel]()
 	init(viewController: IMoreViewController) {
 		self.viewController = viewController
 	}
 }
+
 // MARK: - IMoreViewModel
 extension MoreViewModel: IMoreViewModel {
-	func getMovies() {
+	var sectionsMore: [MoreCell] {
+		return [
+			.profile(identifer: "ProfileTableViewCell", title: "Profile"),
+			.shared(identifer: "SharedTableViewCell", title : "Shared"),
+			.mylist(identifer: "MyListTableViewCell", title: "MyList"),
+			.appsetting(identifer: "StandardTableViewCell", title: "AppSetting"),
+			.account(identifer: "StandardTableViewCell", title: "Account"),
+			.help(identifer: "StandardTableViewCell", title: "Help"),
+			.signout(identifer: "StandardTableViewCell", title: "SignOut")
+		]
+	}
+	func getMore() {
+		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
+			guard let self = self else { return }
+			switch result {
+			case .success(let movies):
+				self.moreViewModels = movies.compactMap({
+					MoreMovieViewModel(item: $0)
+				})
+				self.viewController?.showMovies()
+			case .failure(let error):
+				self.viewController?.showError(error.localizedDescription)
+			}
+		}
 	}
 }

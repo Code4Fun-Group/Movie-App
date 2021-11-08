@@ -24,4 +24,10 @@ extension MovieAppResourceQueryAdapter: IMovieResourceQueryAdapter {
 		request.httpMethod = "GET"
 		return request
 	}
+	func getDownloadMovies() -> URLRequest {
+		let url = config.endpoint.appendingPathComponent("movies/Download")
+		var request = URLRequest(url: url)
+		request.httpMethod = "GET"
+		return request
+}
 }

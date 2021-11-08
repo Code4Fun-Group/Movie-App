@@ -30,7 +30,7 @@ class TabbarViewController: UITabBarController, Storyboarded, Coordinator {
 	// MARK: - private 
 extension TabbarViewController {
 	private func setupTabbar() {
-		tabBarController?.tabBar.itemWidth = 30.0
-		tabBarController?.tabBar.barTintColor = .black
+		tabBarController?.tabBar.itemWidth = ConstraintCells.itemWidth
+		tabBarController?.tabBar.barTintColor = .none
 	}
 }

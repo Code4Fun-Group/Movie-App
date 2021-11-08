@@ -13,12 +13,13 @@ class ContinueItemCell: UICollectionViewCell {
 	@IBOutlet weak var imageContinueItemCell: UIImageView!
 	@IBOutlet weak var infoContinue: UIButton!
 	@IBOutlet weak var moreContinue: UIButton!
+	
+// MARK: - lifeCycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.backgroundColor = .black
 		self.layer.masksToBounds = true
-		self.layer.cornerRadius = 5.0
-		self.layer.borderWidth = 2.0
+		self.layer.cornerRadius = ConstraintCells.cornerRadius
+		self.layer.borderWidth = ConstraintCells.borderWidth
 		self.layer.borderColor = UIColor.white.cgColor
 	}
 	

@@ -13,7 +13,7 @@ class DetailsViewController: BaseViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		self.navigationController?.isNavigationBarHidden = false
-		self.tabBarController?.tabBar.isHidden = true
+		self.tabBarController?.tabBar.isHidden = false
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {

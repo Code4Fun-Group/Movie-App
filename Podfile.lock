@@ -8,6 +8,11 @@ PODS:
     - Alamofire
     - Common
     - Model
+  - Realm (10.16.0):
+    - Realm/Headers (= 10.16.0)
+  - Realm/Headers (10.16.0)
+  - RealmSwift (10.16.0):
+    - Realm (= 10.16.0)
   - SwiftLint (0.44.0)
 
 DEPENDENCIES:
@@ -15,12 +20,15 @@ DEPENDENCIES:
   - Model (from `./Modules/Model`)
   - netfox
   - Networking (from `./Modules/Networking`)
+  - RealmSwift (~> 10)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - netfox
+    - Realm
+    - RealmSwift
     - SwiftLint
 
 EXTERNAL SOURCES:
@@ -37,8 +45,10 @@ SPEC CHECKSUMS:
   Model: 7f3e5e23177077809e32d5f4f061ee2824ccddfe
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
   Networking: e2ffcb34eb8b8c6d816601b82c81be981cad0bd9
+  Realm: b6027801398f3743fc222f096faa85281b506e6c
+  RealmSwift: b02a3d0e4947955da960b642c98ad3a461fc4e70
   SwiftLint: e96c0a8c770c7ebbc4d36c55baf9096bb65c4584
 
-PODFILE CHECKSUM: 7fd84f34bdb940ab4c6c28ea5e9654ec4ba96a83
+PODFILE CHECKSUM: 5875346c88cc7088c590bb5ada0d48f4b6e2186b
 
 COCOAPODS: 1.10.1

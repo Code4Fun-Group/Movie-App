@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum GlobalConstants {
 	static let homeMovies = "Home"
@@ -27,4 +28,12 @@ enum Icon {
 
 enum Config {
 	static let imageUrl = "https://image.tmdb.org/t/p/w500"
+}
+enum ConstraintCells {
+	static let cornerRadius: CGFloat = 5.0
+	static let borderWidth: CGFloat = 2.0
+	static let lineSpace: CGFloat = 10.0
+	static let interItem: CGFloat = 10.0
+	static let sizeItem: CGFloat = 3.0
+	static let itemWidth: CGFloat = 30.0
 }

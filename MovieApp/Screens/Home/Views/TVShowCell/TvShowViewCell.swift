@@ -14,9 +14,10 @@ class TvShowViewCell: UITableViewCell {
 	@IBOutlet private weak var imageTvShow: UIImageView!
 	@IBOutlet private weak var playTvShowButton: UIButton!
 	@IBOutlet private weak var myListTvShowButton: UIButton!
-// MARK: - Life cycles
-	override func awakeFromNib() {
-		super.awakeFromNib()
-		// Initialization code
+
+// MARK: - configure
+	func configure(with cellViewModel: IMovieViewModel?) {
+		titleTvShow.text = cellViewModel?.title ?? ""
+		imageTvShow.linkDownloaded(from: cellViewModel?.backdropPath ?? "")
 	}
 }

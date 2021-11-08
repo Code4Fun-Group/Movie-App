@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IDownloadViewModel {
-	func getMovies()
+	func getDownloadMovies()
 }
 
 class DownloadViewModel {
@@ -21,8 +21,8 @@ class DownloadViewModel {
 
 // MARK: - IDownloadViewModel
 extension DownloadViewModel: IDownloadViewModel {
-	func getMovies() {
-		DependencyResolver.shared.movieAPIService.getMovies { [weak self] result in
+	func getDownloadMovies() {
+		DependencyResolver.shared.movieAPIService.getDownloadMovies { [weak self] result in
 			guard let self = self else { return }
 			switch result {
 			case .success(let movies):

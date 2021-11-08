@@ -14,6 +14,14 @@ protocol IDownloadViewController: AnyObject {
 
 private enum ConstantsCellDownload {
 	static let downloadCell = "DownloadCell"
+	static let cizeHeight: CGFloat = 4.0
+	static let cizeWidth: CGFloat = 3.0
+	static let border: CGFloat = 3.0
+	static let conner: CGFloat = 3.0
+	static let btnCenter: CGFloat = 500.0
+	static let imgCenter: CGFloat = 300.0
+	static let btnheight: CGFloat = 50.0
+	static let imgContrain: CGFloat = 200.0
 }
 
 class DownloadViewController: BaseViewController {
@@ -36,46 +44,40 @@ class DownloadViewController: BaseViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		downloadCollectionView.backgroundColor = .black
-		viewModel?.getMovies()
+		viewModel?.getDownloadMovies()
 	}
 }
 
 // MARK: - Private function
 private extension DownloadViewController {
 	func setupUI() {
-		self.downloadCollectionView.backgroundColor = .black
-		setupTableView()
-	}
-
-	func setupTableView() {
 		downloadCollectionView.register(UINib(nibName: ConstantsCellDownload.downloadCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantsCellDownload.downloadCell)
 	}
 
 	func downloadButton() -> UIButton {
 		let button = UIButton()
-		button.frame = CGRect(x: 0, y: 0, width: view.bounds.width * 0.9, height: 50.0)
+		button.frame = CGRect(x: 0.0, y: 0.0, width: view.bounds.width * 0.9, height: ConstantsCellDownload.btnheight)
 		button.backgroundColor = .white
-		button.titleLabel?.font = UIFont(name: "Arial", size: 15)
+		button.titleLabel?.font = UIFont(name: "Arial", size: 15.0)
 		button.setTitle("Find Something to Download", for: .normal)
 		button.setTitleColor(UIColor.black, for: .normal)
-		button.layer.cornerRadius = 3.0
+		button.layer.cornerRadius = ConstantsCellDownload.conner
 		button.center.x = view.center.x
-		button.center.y = 500.0
-//		button.addTarget(self, action: #selector(onSignInPress), for: .touchUpInside)
+		button.center.y = ConstantsCellDownload.btnCenter
 		return button
 	}
 
 	 func imageDownloadView() -> UIImageView {
 		let img = UIImageView()
-		img.frame = CGRect(x: 0.0, y: 0.0, width: 200.0, height: 200.0)
+		img.frame = CGRect(x: 0.0, y: 0.0, width: ConstantsCellDownload.imgContrain, height: ConstantsCellDownload.imgContrain)
 		img.contentMode = .scaleToFill
-		img.layer.cornerRadius = img.frame.size.width / 2.0
-		img.layer.borderWidth = 3.0
+		img.layer.cornerRadius = img.frame.size.width / ConstantsCellDownload.conner
+		img.layer.borderWidth = ConstantsCellDownload.border
 		img.layer.borderColor = UIColor.black.cgColor
 		img.clipsToBounds = true
 		img.image = UIImage(named: "Download Page Icon")
 		img.center.x = view.center.x
-		img.center.y = 300.0
+		img.center.y = ConstantsCellDownload.imgCenter
 		return img
 	}
 }
@@ -109,7 +111,7 @@ extension DownloadViewController: IDownloadViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension DownloadViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width / 3.0, height: collectionView.frame.height / 4.0 )
+		return CGSize(width: collectionView.frame.width / ConstantsCellDownload.cizeWidth, height: collectionView.frame.height / ConstantsCellDownload.cizeHeight )
 	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

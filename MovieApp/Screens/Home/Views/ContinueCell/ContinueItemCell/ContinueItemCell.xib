@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,17 +21,19 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9o-xQ-eRd">
                         <rect key="frame" x="0.0" y="0.0" width="227" height="253"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XF-Om-f35">
+                        <rect key="frame" x="20" y="267" width="20" height="22"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" image="info.circle" catalog="system"/>
+                    </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tC1-kS-bIb">
-                        <rect key="frame" x="192" y="268" width="5" height="22"/>
+                        <rect key="frame" x="176" y="268" width="31" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="cHd-zq-uXU"/>
-                            <constraint firstAttribute="width" constant="5" id="hZg-C6-14m"/>
+                            <constraint firstAttribute="width" constant="31" id="hZg-C6-14m"/>
                         </constraints>
-                        <state key="normal" image="Group 24"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XF-Om-f35">
-                        <rect key="frame" x="20" y="267" width="24" height="24"/>
-                        <state key="normal" image="Group 7"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <state key="normal" image="ellipsis" catalog="system"/>
                     </button>
                 </subviews>
             </view>
@@ -39,7 +42,7 @@
                 <constraint firstAttribute="bottom" secondItem="A9o-xQ-eRd" secondAttribute="bottom" constant="50" id="0YL-yC-yYF"/>
                 <constraint firstAttribute="trailing" secondItem="A9o-xQ-eRd" secondAttribute="trailing" id="99G-se-WUi"/>
                 <constraint firstItem="4XF-Om-f35" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Db7-bg-mVz"/>
-                <constraint firstAttribute="trailing" secondItem="tC1-kS-bIb" secondAttribute="trailing" constant="30" id="T9J-vY-dSN"/>
+                <constraint firstAttribute="trailing" secondItem="tC1-kS-bIb" secondAttribute="trailing" constant="20" id="T9J-vY-dSN"/>
                 <constraint firstItem="4XF-Om-f35" firstAttribute="top" secondItem="A9o-xQ-eRd" secondAttribute="bottom" constant="14" id="V84-eh-14F"/>
                 <constraint firstItem="A9o-xQ-eRd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gOz-hv-Wa0"/>
                 <constraint firstItem="A9o-xQ-eRd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lkf-Xg-251"/>
@@ -55,7 +58,10 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Group 24" width="5" height="21"/>
-        <image name="Group 7" width="24" height="24"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

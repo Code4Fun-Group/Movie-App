@@ -16,7 +16,6 @@ class PreviewCollectionViewCell: UICollectionViewCell {
 // MARK: - LifeCycle
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		self.backgroundColor = .black
 	}
 	
 // MARK: - configure

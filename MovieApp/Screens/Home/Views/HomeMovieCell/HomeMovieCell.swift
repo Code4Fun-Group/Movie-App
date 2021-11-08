@@ -22,7 +22,7 @@ class HomeMovieCell: UITableViewCell {
 	@IBOutlet private weak var imageHomeMovieCell: UIImageView!
 
 // MARK: - configure
-	func configure(cellViewModel: IMovieViewModel?) {
+	func configure(with cellViewModel: IMovieViewModel?) {
 		titleMovieLabel.text = cellViewModel?.title ?? ""
 		imageHomeMovieCell.linkDownloaded(from: cellViewModel?.posterPath ?? "")
 		infoMovieLabel.text = cellViewModel?.mediaType ?? ""
