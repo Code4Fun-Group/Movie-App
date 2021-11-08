@@ -28,7 +28,7 @@ class SharedTableViewCell: UITableViewCell {
 	@IBOutlet private weak var mailButton: UIButton!
 
 // MARK: - Variables
-	weak var viewModel: sharedDelegate?
+	weak var viewModelShared: sharedDelegate?
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		setUpUI()
@@ -36,17 +36,17 @@ class SharedTableViewCell: UITableViewCell {
 
 // MARK: - Actions
 	@IBAction private func coppyButtonAction(_ sender: UIButton!) {
-		viewModel?.sharedAlert()
+		viewModelShared?.sharedAlert()
 		UIPasteboard.general.string = textShared.text
 	}
 	@IBAction private func sharedFacebookAction(_ sender: Any) {
-		viewModel?.sharedFacebook()
+		viewModelShared?.sharedFacebook()
 	}
 	@IBAction private func sharedWhatAppAction(_ sender: Any) {
-		viewModel?.sharedWhatApps()
+		viewModelShared?.sharedWhatApps()
 	}
 	@IBAction private func sharedGmailAction(_ sender: Any) {
-		viewModel?.sharedGmail()
+		viewModelShared?.sharedGmail()
 	}
 }
 // MARK: - Private

@@ -85,7 +85,7 @@ extension MoreViewController: UITableViewDataSource {
 
 		case .shared(let identifer, _):
 			guard let cell = self.moreTableView.dequeueReusableCell(withIdentifier: identifer) as? SharedTableViewCell else { return UITableViewCell() }
-			cell.viewModel = self
+			cell.viewModelShared = self
 			return cell
 
 		case .mylist(let identifer, _):
