@@ -25,7 +25,7 @@ extension HomeViewModel: IHomeViewModel {
 	var sections: [CaseCell] {
 		return [
 			.home(identifer: "HomeMovieCell", title: "HOME"),
-			.preview(identifer: "PreviewCell", title : "PREVIEW"),
+			.preview(identifer: "PreviewCell", title: "PREVIEW"),
 			.continueCell(identifer: "ContinueCell", title: "CONTINUE"),
 			.list(identifer: "ListMovieCell", title: "MY LIST"),
 			.europe(identifer: "ListMovieCell", title: "EUROPE"),
