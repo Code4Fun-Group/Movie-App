@@ -136,10 +136,10 @@ extension SearchViewController: UISearchBarDelegate {
 			searchActive = true
 			pendingRequestWorkItem?.cancel()
 			let requestWorkItem = DispatchWorkItem { [weak self] in
-			self.searchViewModel?.getSearchMovies(searchText: searchText)
+				self?.searchViewModel?.getSearchMovies(searchText: searchText)
 			}
 			pendingRequestWorkItem = requestWorkItem
-			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2500), execute: requestWorkItem)
+			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1300), execute: requestWorkItem)
 		} else {
 			searchActive = false
 		}
