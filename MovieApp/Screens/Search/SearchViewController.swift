@@ -139,7 +139,7 @@ extension SearchViewController: UISearchBarDelegate {
 //			pendingRequestWorkItem?.cancel()
 //
 //			let requestWorkItem = DispatchWorkItem { [weak self] in
-			self.searchViewModel?.getSearchMovies(searchText: "Logan")
+			self.searchViewModel?.getSearchMovies(searchText: searchText)
 //			}
 //
 //			pendingRequestWorkItem = requestWorkItem
