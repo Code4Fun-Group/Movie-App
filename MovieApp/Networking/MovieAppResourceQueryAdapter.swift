@@ -10,7 +10,7 @@ import Model
 
 struct MovieAppResourceQueryAdapter {
 	let config: INetworkingConfig
-
+	
 	init(config: INetworkingConfig) {
 		self.config = config
 	}
@@ -29,19 +29,12 @@ extension MovieAppResourceQueryAdapter: IMovieResourceQueryAdapter {
 		var request = URLRequest(url: url)
 		request.httpMethod = "GET"
 		return request
-}
-
+	}
+	
 	func getSearchMovies(searchText: String) -> URLRequest {
 		let url = config.endpoint.appendingPathComponent("search?query=\(searchText)")
 		var request = URLRequest(url: url)
 		request.httpMethod = "GET"
 		return request
 	}
-
-//	func getSearchMovies() -> URLRequest {
-//		let url = config.endpoint.appendingPathComponent("search?query=Logan")
-//		var request = URLRequest(url: url)
-//		request.httpMethod = "GET"
-//		return request
-//	}
 }

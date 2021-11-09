@@ -30,7 +30,6 @@ class SearchViewController: BaseViewController {
 	var searchController = UISearchController()
 	var searchActive = false
 	var isSimpleLayoutSearch = false
-	var filter: [SearchMovieViewModel] = [SearchMovieViewModel]()
 
 	// MARK: - Life cycles
 	override func viewDidLoad() {
@@ -132,28 +131,22 @@ extension SearchViewController: UISearchResultsUpdating {
 
 extension SearchViewController: UISearchBarDelegate {
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//		var pendingRequestWorkItem: DispatchWorkItem?
+		var pendingRequestWorkItem: DispatchWorkItem?
 		if searchText.isEmpty == false {
 			searchActive = true
-//			filter.removeAll()
-//			pendingRequestWorkItem?.cancel()
-//
-//			let requestWorkItem = DispatchWorkItem { [weak self] in
+			pendingRequestWorkItem?.cancel()
+			let requestWorkItem = DispatchWorkItem { [weak self] in
 			self.searchViewModel?.getSearchMovies(searchText: searchText)
-//			}
-//
-//			pendingRequestWorkItem = requestWorkItem
-//			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2500), execute: requestWorkItem)
+			}
+			pendingRequestWorkItem = requestWorkItem
+			DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(2500), execute: requestWorkItem)
 		} else {
 			searchActive = false
-//			filter.removeAll()
-
 		}
 		searchCollectionView.reloadData()
 	}
 
 	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//		filter.removeAll()
 		searchCollectionView.reloadData()
 	}
 }
