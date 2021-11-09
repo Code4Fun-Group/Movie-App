@@ -5,17 +5,25 @@
 //  Created by MinhDev on 10/6/21.
 //
 
-import Foundation
+import UIKit
+import Model
 
-protocol ISearchViewModel {
-	func getMovies()
+protocol ISearchMovieViewModel {
+	var id: Int? { get }
+	var title: String? { get }
+	var imgUrl: String? { get }
 }
-class SearchViewModel {
-
+struct SearchMovieViewModel {
+	var id: Int?
+	var title: String?
+	var imgUrl: String?
 }
 
 // MARK: - ISearchViewModel
-extension SearchViewModel: ISearchViewModel {
-	func getMovies() {
+extension SearchMovieViewModel: ISearchMovieViewModel {
+	init(item: IMovieModel) {
+		id = item.id
+		title = item.title
+		imgUrl = item.posterPath
 	}
 }

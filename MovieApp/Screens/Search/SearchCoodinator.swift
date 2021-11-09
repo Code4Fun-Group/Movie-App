@@ -2,20 +2,20 @@
 //  SearchCoodinator.swift
 //  MovieApp
 //
-//  Created by MinhDev on 10/8/21.
+//  Created by đông on 12/10/2021.
 //
 
 import Foundation
 import UIKit
 
 class SearchCoordinator: CoordinatorProtocol {
-	// MARK: - Variables
+
 	var navigationController: UINavigationController?
 
 	required init(_ window: UIWindow? = nil, navigationController: UINavigationController? = UINavigationController()) {
 		self.navigationController = navigationController
-		self.navigationController?.isNavigationBarHidden = true
-		
+		self.navigationController?.isNavigationBarHidden = false
+
 		let view = SearchViewController.fromStoryboard()
 		view.coordinator = self
 		view.tabBarItem.image = UIImage(named: Icon.search)

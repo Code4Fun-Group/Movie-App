@@ -147,18 +147,6 @@
 		046BD8092730F0BB0089C5B0 /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7662730F0BB0089C5B0 /* StandardTableViewCell.swift */; };
 		046BD80A2730F0BB0089C5B0 /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7662730F0BB0089C5B0 /* StandardTableViewCell.swift */; };
 		046BD80B2730F0BB0089C5B0 /* StandardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7662730F0BB0089C5B0 /* StandardTableViewCell.swift */; };
-		046BD80C2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7692730F0BB0089C5B0 /* SearchViewModel.swift */; };
-		046BD80D2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7692730F0BB0089C5B0 /* SearchViewModel.swift */; };
-		046BD80E2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD7692730F0BB0089C5B0 /* SearchViewModel.swift */; };
-		046BD80F2730F0BB0089C5B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76A2730F0BB0089C5B0 /* SearchViewController.swift */; };
-		046BD8102730F0BB0089C5B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76A2730F0BB0089C5B0 /* SearchViewController.swift */; };
-		046BD8112730F0BB0089C5B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76A2730F0BB0089C5B0 /* SearchViewController.swift */; };
-		046BD8122730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD76B2730F0BB0089C5B0 /* SearchViewController.storyboard */; };
-		046BD8132730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD76B2730F0BB0089C5B0 /* SearchViewController.storyboard */; };
-		046BD8142730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046BD76B2730F0BB0089C5B0 /* SearchViewController.storyboard */; };
-		046BD8152730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76C2730F0BB0089C5B0 /* SearchCoodinator.swift */; };
-		046BD8162730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76C2730F0BB0089C5B0 /* SearchCoodinator.swift */; };
-		046BD8172730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76C2730F0BB0089C5B0 /* SearchCoodinator.swift */; };
 		046BD8182730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76F2730F0BB0089C5B0 /* DownloadViewModel.swift */; };
 		046BD8192730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76F2730F0BB0089C5B0 /* DownloadViewModel.swift */; };
 		046BD81A2730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BD76F2730F0BB0089C5B0 /* DownloadViewModel.swift */; };
@@ -209,6 +197,18 @@
 		CBEAB32E26FB9BAC00BD82C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2ED26FA1BBE00BD82C6 /* LaunchScreen.storyboard */; };
 		CBEAB32F26FB9BAC00BD82C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2EB26FA1BBE00BD82C6 /* Assets.xcassets */; };
 		CEC32ABD7A3F87346F63CA8C /* Pods_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BBC5A39C61B6C223A5C05 /* Pods_MovieAppUITests.framework */; };
+		F535E8C9273A28FE0084DE2C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8BA273A28FE0084DE2C /* SearchViewModel.swift */; };
+		F535E8CA273A28FE0084DE2C /* HomeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8BB273A28FE0084DE2C /* HomeSearchViewModel.swift */; };
+		F535E8CB273A28FE0084DE2C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8BC273A28FE0084DE2C /* SearchViewController.swift */; };
+		F535E8CC273A28FE0084DE2C /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F535E8BD273A28FE0084DE2C /* SearchViewController.storyboard */; };
+		F535E8CD273A28FE0084DE2C /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8BF273A28FE0084DE2C /* SearchModel.swift */; };
+		F535E8CE273A28FE0084DE2C /* SearchCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8C0273A28FE0084DE2C /* SearchCoodinator.swift */; };
+		F535E8CF273A28FE0084DE2C /* SearchDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8C3273A28FE0084DE2C /* SearchDetailCell.swift */; };
+		F535E8D0273A28FE0084DE2C /* SearchCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F535E8C4273A28FE0084DE2C /* SearchCollectionReusableView.xib */; };
+		F535E8D1273A28FE0084DE2C /* SearchDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F535E8C5273A28FE0084DE2C /* SearchDetailCell.xib */; };
+		F535E8D2273A28FE0084DE2C /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8C6273A28FE0084DE2C /* SearchCollectionViewCell.swift */; };
+		F535E8D3273A28FE0084DE2C /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8C7273A28FE0084DE2C /* SearchCollectionReusableView.swift */; };
+		F535E8D4273A28FE0084DE2C /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F535E8C8273A28FE0084DE2C /* SearchCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,10 +264,6 @@
 		046BD7632730F0BB0089C5B0 /* SharedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharedTableViewCell.xib; sourceTree = "<group>"; };
 		046BD7652730F0BB0089C5B0 /* StandardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardTableViewCell.xib; sourceTree = "<group>"; };
 		046BD7662730F0BB0089C5B0 /* StandardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardTableViewCell.swift; sourceTree = "<group>"; };
-		046BD7692730F0BB0089C5B0 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		046BD76A2730F0BB0089C5B0 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		046BD76B2730F0BB0089C5B0 /* SearchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
-		046BD76C2730F0BB0089C5B0 /* SearchCoodinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoodinator.swift; sourceTree = "<group>"; };
 		046BD76F2730F0BB0089C5B0 /* DownloadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		046BD7702730F0BB0089C5B0 /* DownloadMovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadMovieViewModel.swift; sourceTree = "<group>"; };
 		046BD7712730F0BB0089C5B0 /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +325,18 @@
 		D9FF1A9360F060FD864337BC /* Pods-MovieApp.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.qa.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.qa.xcconfig"; sourceTree = "<group>"; };
 		DA18DD29E9244E23374D34C4 /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE7E02C9C8E0C54B99530B0 /* Pods-iOSBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.debug.xcconfig"; path = "Target Support Files/Pods-iOSBase/Pods-iOSBase.debug.xcconfig"; sourceTree = "<group>"; };
+		F535E8BA273A28FE0084DE2C /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F535E8BB273A28FE0084DE2C /* HomeSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewModel.swift; sourceTree = "<group>"; };
+		F535E8BC273A28FE0084DE2C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F535E8BD273A28FE0084DE2C /* SearchViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		F535E8BF273A28FE0084DE2C /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		F535E8C0273A28FE0084DE2C /* SearchCoodinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCoodinator.swift; sourceTree = "<group>"; };
+		F535E8C3273A28FE0084DE2C /* SearchDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailCell.swift; sourceTree = "<group>"; };
+		F535E8C4273A28FE0084DE2C /* SearchCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionReusableView.xib; sourceTree = "<group>"; };
+		F535E8C5273A28FE0084DE2C /* SearchDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDetailCell.xib; sourceTree = "<group>"; };
+		F535E8C6273A28FE0084DE2C /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		F535E8C7273A28FE0084DE2C /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
+		F535E8C8273A28FE0084DE2C /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,12 +388,12 @@
 		046BD71E2730F0BB0089C5B0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F535E8B8273A28FE0084DE2C /* Search */,
 				046BD7492730F0BB0089C5B0 /* Tabbar */,
 				046BD77D2730F0BB0089C5B0 /* Base */,
 				046BD71F2730F0BB0089C5B0 /* Home */,
 				046BD7452730F0BB0089C5B0 /* Details */,
 				046BD74D2730F0BB0089C5B0 /* More */,
-				046BD7672730F0BB0089C5B0 /* Search */,
 				046BD76D2730F0BB0089C5B0 /* Download */,
 				046BD7792730F0BB0089C5B0 /* CommingSoon */,
 			);
@@ -624,25 +632,6 @@
 			path = StandardCell;
 			sourceTree = "<group>";
 		};
-		046BD7672730F0BB0089C5B0 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				046BD7682730F0BB0089C5B0 /* ViewModels */,
-				046BD76A2730F0BB0089C5B0 /* SearchViewController.swift */,
-				046BD76B2730F0BB0089C5B0 /* SearchViewController.storyboard */,
-				046BD76C2730F0BB0089C5B0 /* SearchCoodinator.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		046BD7682730F0BB0089C5B0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				046BD7692730F0BB0089C5B0 /* SearchViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		046BD76D2730F0BB0089C5B0 /* Download */ = {
 			isa = PBXGroup;
 			children = (
@@ -858,6 +847,57 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F535E8B8273A28FE0084DE2C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F535E8BC273A28FE0084DE2C /* SearchViewController.swift */,
+				F535E8BD273A28FE0084DE2C /* SearchViewController.storyboard */,
+				F535E8B9273A28FE0084DE2C /* ViewModels */,
+				F535E8BE273A28FE0084DE2C /* Models */,
+				F535E8C0273A28FE0084DE2C /* SearchCoodinator.swift */,
+				F535E8C1273A28FE0084DE2C /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F535E8B9273A28FE0084DE2C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F535E8BA273A28FE0084DE2C /* SearchViewModel.swift */,
+				F535E8BB273A28FE0084DE2C /* HomeSearchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F535E8BE273A28FE0084DE2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F535E8BF273A28FE0084DE2C /* SearchModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F535E8C1273A28FE0084DE2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F535E8C2273A28FE0084DE2C /* SearchMovieCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F535E8C2273A28FE0084DE2C /* SearchMovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				F535E8C3273A28FE0084DE2C /* SearchDetailCell.swift */,
+				F535E8C4273A28FE0084DE2C /* SearchCollectionReusableView.xib */,
+				F535E8C5273A28FE0084DE2C /* SearchDetailCell.xib */,
+				F535E8C6273A28FE0084DE2C /* SearchCollectionViewCell.swift */,
+				F535E8C7273A28FE0084DE2C /* SearchCollectionReusableView.swift */,
+				F535E8C8273A28FE0084DE2C /* SearchCollectionViewCell.xib */,
+			);
+			path = SearchMovieCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -979,7 +1019,6 @@
 				046BD7B32730F0BB0089C5B0 /* PreviewCell.xib in Resources */,
 				046BD7BF2730F0BB0089C5B0 /* ContinueCell.xib in Resources */,
 				046BD7FE2730F0BB0089C5B0 /* MyListTableViewCell.xib in Resources */,
-				046BD8132730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */,
 				046BD7CB2730F0BB0089C5B0 /* DetailsViewController.storyboard in Resources */,
 				046BD7982730F0BB0089C5B0 /* ListItemCell.xib in Resources */,
 			);
@@ -1007,7 +1046,6 @@
 				046BD7B42730F0BB0089C5B0 /* PreviewCell.xib in Resources */,
 				046BD7C02730F0BB0089C5B0 /* ContinueCell.xib in Resources */,
 				046BD7FF2730F0BB0089C5B0 /* MyListTableViewCell.xib in Resources */,
-				046BD8142730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */,
 				046BD7CC2730F0BB0089C5B0 /* DetailsViewController.storyboard in Resources */,
 				046BD7992730F0BB0089C5B0 /* ListItemCell.xib in Resources */,
 			);
@@ -1019,6 +1057,7 @@
 			files = (
 				046BD7CA2730F0BB0089C5B0 /* DetailsViewController.storyboard in Resources */,
 				046BD7E22730F0BB0089C5B0 /* MoreViewController.storyboard in Resources */,
+				F535E8D0273A28FE0084DE2C /* SearchCollectionReusableView.xib in Resources */,
 				046BD7D62730F0BB0089C5B0 /* TabbarViewController.storyboard in Resources */,
 				046BD7BE2730F0BB0089C5B0 /* ContinueCell.xib in Resources */,
 				CBEAB32E26FB9BAC00BD82C6 /* LaunchScreen.storyboard in Resources */,
@@ -1026,6 +1065,7 @@
 				046BD82A2730F0BB0089C5B0 /* DownloadCell.xib in Resources */,
 				046BD7B22730F0BB0089C5B0 /* PreviewCell.xib in Resources */,
 				046BD7C72730F0BB0089C5B0 /* ContinueItemCell.xib in Resources */,
+				F535E8D4273A28FE0084DE2C /* SearchCollectionViewCell.xib in Resources */,
 				046BD8032730F0BB0089C5B0 /* SharedTableViewCell.xib in Resources */,
 				046BD7B82730F0BB0089C5B0 /* HomeMovieCell.xib in Resources */,
 				046BD8062730F0BB0089C5B0 /* StandardTableViewCell.xib in Resources */,
@@ -1033,13 +1073,14 @@
 				046BD7972730F0BB0089C5B0 /* ListItemCell.xib in Resources */,
 				046BD8212730F0BB0089C5B0 /* DownloadViewController.storyboard in Resources */,
 				CBEAB32F26FB9BAC00BD82C6 /* Assets.xcassets in Resources */,
+				F535E8D1273A28FE0084DE2C /* SearchDetailCell.xib in Resources */,
 				046BD7942730F0BB0089C5B0 /* ListMovieCell.xib in Resources */,
 				046BD7F12730F0BB0089C5B0 /* ProfileTableViewCell.xib in Resources */,
 				046BD7AC2730F0BB0089C5B0 /* PreviewCollectionViewCell.xib in Resources */,
-				046BD8122730F0BB0089C5B0 /* SearchViewController.storyboard in Resources */,
 				046BD7FD2730F0BB0089C5B0 /* MyListTableViewCell.xib in Resources */,
 				046BD7F72730F0BB0089C5B0 /* ProfileItemCell.xib in Resources */,
 				046BD7912730F0BB0089C5B0 /* HomeViewController.storyboard in Resources */,
+				F535E8CC273A28FE0084DE2C /* SearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1166,14 +1207,12 @@
 				046BD7EC2730F0BB0089C5B0 /* MoreCoodinator.swift in Sources */,
 				046BD7832730F0BB0089C5B0 /* HomeViewModel.swift in Sources */,
 				046BD7EF2730F0BB0089C5B0 /* ProfileTableViewCell.swift in Sources */,
-				046BD8102730F0BB0089C5B0 /* SearchViewController.swift in Sources */,
 				046BD7802730F0BB0089C5B0 /* HomeCordinator.swift in Sources */,
 				046BD8012730F0BB0089C5B0 /* SharedTableViewCell.swift in Sources */,
 				046BD8372730F0BB0089C5B0 /* ComingCoodinator.swift in Sources */,
 				046BD7D42730F0BB0089C5B0 /* TabbarViewController.swift in Sources */,
 				046BD7892730F0BB0089C5B0 /* HomeConstants.swift in Sources */,
 				046BD81C2730F0BB0089C5B0 /* DownloadMovieViewModel.swift in Sources */,
-				046BD8162730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */,
 				046BD7E62730F0BB0089C5B0 /* MoreModel.swift in Sources */,
 				046BD7CE2730F0BB0089C5B0 /* DetailsViewController.swift in Sources */,
 				046BD8252730F0BB0089C5B0 /* DownloadModel.swift in Sources */,
@@ -1188,7 +1227,6 @@
 				046BD7FB2730F0BB0089C5B0 /* MyListTableViewCell.swift in Sources */,
 				046BD8282730F0BB0089C5B0 /* DownloadCoodinator.swift in Sources */,
 				046BD8192730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */,
-				046BD80D2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */,
 				046BD7A72730F0BB0089C5B0 /* TvShowViewCell.swift in Sources */,
 				046BD7F52730F0BB0089C5B0 /* ProfileItemCell.swift in Sources */,
 				046BD7DD2730F0BB0089C5B0 /* MoreViewModel.swift in Sources */,
@@ -1213,14 +1251,12 @@
 				046BD7ED2730F0BB0089C5B0 /* MoreCoodinator.swift in Sources */,
 				046BD7842730F0BB0089C5B0 /* HomeViewModel.swift in Sources */,
 				046BD7F02730F0BB0089C5B0 /* ProfileTableViewCell.swift in Sources */,
-				046BD8112730F0BB0089C5B0 /* SearchViewController.swift in Sources */,
 				046BD7812730F0BB0089C5B0 /* HomeCordinator.swift in Sources */,
 				046BD8022730F0BB0089C5B0 /* SharedTableViewCell.swift in Sources */,
 				046BD8382730F0BB0089C5B0 /* ComingCoodinator.swift in Sources */,
 				046BD7D52730F0BB0089C5B0 /* TabbarViewController.swift in Sources */,
 				046BD78A2730F0BB0089C5B0 /* HomeConstants.swift in Sources */,
 				046BD81D2730F0BB0089C5B0 /* DownloadMovieViewModel.swift in Sources */,
-				046BD8172730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */,
 				046BD7E72730F0BB0089C5B0 /* MoreModel.swift in Sources */,
 				046BD7CF2730F0BB0089C5B0 /* DetailsViewController.swift in Sources */,
 				046BD8262730F0BB0089C5B0 /* DownloadModel.swift in Sources */,
@@ -1235,7 +1271,6 @@
 				046BD7FC2730F0BB0089C5B0 /* MyListTableViewCell.swift in Sources */,
 				046BD8292730F0BB0089C5B0 /* DownloadCoodinator.swift in Sources */,
 				046BD81A2730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */,
-				046BD80E2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */,
 				046BD7A82730F0BB0089C5B0 /* TvShowViewCell.swift in Sources */,
 				046BD7F62730F0BB0089C5B0 /* ProfileItemCell.swift in Sources */,
 				046BD7DE2730F0BB0089C5B0 /* MoreViewModel.swift in Sources */,
@@ -1249,7 +1284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				046BD7822730F0BB0089C5B0 /* HomeViewModel.swift in Sources */,
-				046BD8152730F0BB0089C5B0 /* SearchCoodinator.swift in Sources */,
 				046BD81B2730F0BB0089C5B0 /* DownloadMovieViewModel.swift in Sources */,
 				042CF94F27108CC700275E9F /* MovieResponse.swift in Sources */,
 				046BD8092730F0BB0089C5B0 /* StandardTableViewCell.swift in Sources */,
@@ -1258,7 +1292,6 @@
 				046BD7D32730F0BB0089C5B0 /* TabbarViewController.swift in Sources */,
 				046BD8362730F0BB0089C5B0 /* ComingCoodinator.swift in Sources */,
 				046BD8002730F0BB0089C5B0 /* SharedTableViewCell.swift in Sources */,
-				046BD80C2730F0BB0089C5B0 /* SearchViewModel.swift in Sources */,
 				046BD7A02730F0BB0089C5B0 /* ListMovieCell.swift in Sources */,
 				046BD7B52730F0BB0089C5B0 /* HomeMovieCell.swift in Sources */,
 				046BD7E82730F0BB0089C5B0 /* MoreConstants.swift in Sources */,
@@ -1268,16 +1301,24 @@
 				046BD7DF2730F0BB0089C5B0 /* MoreViewController.swift in Sources */,
 				046BD7A62730F0BB0089C5B0 /* TvShowViewCell.swift in Sources */,
 				046BD7EB2730F0BB0089C5B0 /* MoreCoodinator.swift in Sources */,
+				F535E8C9273A28FE0084DE2C /* SearchViewModel.swift in Sources */,
 				046BD78E2730F0BB0089C5B0 /* HomeViewController.swift in Sources */,
+				F535E8CA273A28FE0084DE2C /* HomeSearchViewModel.swift in Sources */,
 				046BD7852730F0BB0089C5B0 /* MovieViewModel.swift in Sources */,
 				CBB505B52705FDAC00FA6D2D /* MovieAppResourceResponseAdapter.swift in Sources */,
 				046BD7882730F0BB0089C5B0 /* HomeConstants.swift in Sources */,
 				046BD8242730F0BB0089C5B0 /* DownloadModel.swift in Sources */,
+				F535E8CE273A28FE0084DE2C /* SearchCoodinator.swift in Sources */,
 				CBB505BC2706013300FA6D2D /* DependencyResolver.swift in Sources */,
 				042CF9F62712FB2900275E9F /* ImageDownload.swift in Sources */,
+				F535E8D2273A28FE0084DE2C /* SearchCollectionViewCell.swift in Sources */,
+				F535E8D3273A28FE0084DE2C /* SearchCollectionReusableView.swift in Sources */,
 				046BD7C42730F0BB0089C5B0 /* ContinueItemCell.swift in Sources */,
+				F535E8CD273A28FE0084DE2C /* SearchModel.swift in Sources */,
 				CBEAB32926FB9BAC00BD82C6 /* AppDelegate.swift in Sources */,
 				046BD82D2730F0BB0089C5B0 /* DownloadCell.swift in Sources */,
+				F535E8CB273A28FE0084DE2C /* SearchViewController.swift in Sources */,
+				F535E8CF273A28FE0084DE2C /* SearchDetailCell.swift in Sources */,
 				046BD7DC2730F0BB0089C5B0 /* MoreViewModel.swift in Sources */,
 				046BD81E2730F0BB0089C5B0 /* DownloadViewController.swift in Sources */,
 				042CF9542710925000275E9F /* Configuration.swift in Sources */,
@@ -1290,7 +1331,6 @@
 				046BD7D92730F0BB0089C5B0 /* MoreFileViewModel.swift in Sources */,
 				046BD8302730F0BB0089C5B0 /* ComingSoonViewController.swift in Sources */,
 				04094444270ECF2700B4D136 /* CoordinatorDelegate.swift in Sources */,
-				046BD80F2730F0BB0089C5B0 /* SearchViewController.swift in Sources */,
 				046BD8182730F0BB0089C5B0 /* DownloadViewModel.swift in Sources */,
 				046BD7C12730F0BB0089C5B0 /* ContinueCell.swift in Sources */,
 				046BD7EE2730F0BB0089C5B0 /* ProfileTableViewCell.swift in Sources */,
