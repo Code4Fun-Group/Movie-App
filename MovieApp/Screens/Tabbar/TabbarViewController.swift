@@ -13,6 +13,7 @@ class TabbarViewController: UITabBarController, Storyboarded, Coordinator {
 	private var searchCoordinator = SearchCoordinator()
 	private var downloadCoordinator = DownloadCoordinator()
 	private var moreCoordinator = MoreCoordinator()
+	private var commingCoordinator = ComingCoordinator()
 
 	var coordinator: CoordinatorProtocol?
 	// MARK: - Life cycles
@@ -22,6 +23,7 @@ class TabbarViewController: UITabBarController, Storyboarded, Coordinator {
 		viewControllers = [
 			homeCoordinator.navigationController ?? UINavigationController(),
 			searchCoordinator.navigationController ?? UINavigationController(),
+			commingCoordinator.navigationController ?? UINavigationController(),
 			downloadCoordinator.navigationController ?? UINavigationController(),
 			moreCoordinator.navigationController ?? UINavigationController()
 		]
