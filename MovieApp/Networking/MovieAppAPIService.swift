@@ -44,7 +44,7 @@ extension MovieAppAPIService: IMovieAPIService {
 			}
 		}
 	}
-
+	
 	func getSearchMovies(searchText: String, completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
 		let request = query.getSearchMovies(searchText: searchText)
 		client.request(request) { [weak self] result in
@@ -63,7 +63,7 @@ extension MovieAppAPIService: IMovieAPIService {
 			}
 		}
 	}
-
+	
 	func getDownloadMovies(completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
 		let request = query.getDownloadMovies()
 		client.request(request) { [weak self] result in
