@@ -10,4 +10,5 @@ import Foundation
 public protocol IMovieResourceQueryAdapter {
 	func getMovies() -> URLRequest
 	func getDownloadMovies() -> URLRequest
+	func getSearchMovies(searchText: String) -> URLRequest
 }

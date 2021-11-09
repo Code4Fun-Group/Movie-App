@@ -10,4 +10,6 @@ import Foundation
 public protocol IMovieResourceResponseAdataper {
 	func getMovies(_ data: Data?, completion: @escaping (Result<[IMovieModel], Error>) -> Void)
 	func getDownloadMovies(_ data: Data?, completion: @escaping (Result<[IMovieModel], Error>) -> Void)
+	func getSearchMovies(_ data: Data?, completion: @escaping (Result<[IMovieModel], Error>) -> Void)
+
 }
