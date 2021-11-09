@@ -25,7 +25,7 @@ extension MoreViewModel: IMoreViewModel {
 	var sectionsMore: [MoreCell] {
 		return [
 			.profile(identifer: "ProfileTableViewCell", title: "Profile"),
-			.shared(identifer: "SharedTableViewCell", title : "Shared"),
+			.shared(identifer: "SharedTableViewCell", title: "Shared"),
 			.mylist(identifer: "MyListTableViewCell", title: "MyList"),
 			.appsetting(identifer: "StandardTableViewCell", title: "AppSetting"),
 			.account(identifer: "StandardTableViewCell", title: "Account"),

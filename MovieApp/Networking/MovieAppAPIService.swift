@@ -45,7 +45,7 @@ extension MovieAppAPIService: IMovieAPIService {
 		}
 	}
 
-	func getSearchMovies(searchText: String ,completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
+	func getSearchMovies(searchText: String, completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
 		let request = query.getSearchMovies(searchText: searchText)
 		client.request(request) { [weak self] result in
 			guard let self = self else { return }
@@ -63,25 +63,6 @@ extension MovieAppAPIService: IMovieAPIService {
 			}
 		}
 	}
-
-//	func getSearchMovies(completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
-//		let request = query.getSearchMovies()
-//		client.request(request) { [weak self] result in
-//			guard let self = self else { return }
-//			switch result {
-//			case .success(let data):
-//				self.resourceHandler.getSearchMovies(data, completion: completion)
-//			case .failure(let error):
-//				guard let errorData = error.responseData else {
-//					completion(.failure(error))
-//					return
-//				}
-//				self.resourceHandler.handle(errorData: errorData) { serverError in
-//					completion(.failure(serverError ?? error))
-//				}
-//			}
-//		}
-//	}
 
 	func getDownloadMovies(completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
 		let request = query.getDownloadMovies()
