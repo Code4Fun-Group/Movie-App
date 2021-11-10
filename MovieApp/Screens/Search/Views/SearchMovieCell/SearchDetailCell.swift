@@ -20,7 +20,6 @@ class SearchDetailCell: UICollectionViewCell {
 	// MARK: 
 	override func awakeFromNib() {
 		super.awakeFromNib()
-//		searchName.textColor = .white
 	}
 
 	func configured(searchData: ISearchMovieViewModel?) {

@@ -44,7 +44,6 @@ extension MovieAppResourceResponseAdapter: IMovieResourceResponseAdataper {
 				completion(.failure(error))
 			}
 		}
-
 	}
 
 	func getMovies(_ data: Data?, completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
