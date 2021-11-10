@@ -12,6 +12,8 @@ private enum ConstantSearch {
 	static let searchCollectionReusableView = "SearchCollectionReusableView"
 	static let searchDetailCell = "SearchDetailCell"
 	static let detailVC = "DetailsViewController"
+	static let heightCLVC = 6.0
+	static let heightHeaderCLVC = 10.0
 }
 
 protocol ISearchViewController: AnyObject {
@@ -35,6 +37,7 @@ class SearchViewController: BaseViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		setupSearchUI()
 		searchViewModel = HomeSearchViewModel(searchViewController: self)
 	}
 
@@ -48,14 +51,15 @@ class SearchViewController: BaseViewController {
 // MARK: - Private function
 private extension SearchViewController {
 	func setupUI() {
-
 		// MARK: - CollectionView
 		searchCollectionView.delegate = self
 		searchCollectionView.dataSource = self
 		searchCollectionView.register(UINib(nibName: ConstantSearch.searchCLVC, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantSearch.searchCLVC)
 		searchCollectionView.register(UINib(nibName: ConstantSearch.searchDetailCell, bundle: Bundle.main), forCellWithReuseIdentifier: ConstantSearch.searchDetailCell)
 		searchCollectionView.register(UINib(nibName: ConstantSearch.searchCollectionReusableView, bundle: Bundle.main), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConstantSearch.searchCollectionReusableView)
+	}
 
+	func setupSearchUI() {
 		// MARK: - SearchBar
 		searchController.searchBar.delegate = self
 		searchController.searchResultsUpdater = self
@@ -79,7 +83,7 @@ extension SearchViewController: ISearchViewController {
 }
 
 // MARK: - UICollectionViewDataSource
-extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SearchViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return searchViewModel?.searchMovieViewModels.count ?? 0
 	}
@@ -91,18 +95,20 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 
 	}
 
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: collectionView.frame.width, height: collectionView.frame.height / 6)
-	}
-
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 		let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ConstantSearch.searchCollectionReusableView, for: indexPath) as! SearchCollectionReusableView
 		headerView.configure()
 		return headerView
 	}
+}
+
+extension SearchViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		return CGSize(width: collectionView.frame.width, height: collectionView.frame.height / CGFloat(ConstantSearch.heightCLVC))
+	}
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-		return CGSize(width: view.frame.size.width, height: view.frame.size.width / 10)
+		return CGSize(width: view.frame.size.width, height: view.frame.size.width / CGFloat(ConstantSearch.heightHeaderCLVC))
 	}
 }
 
