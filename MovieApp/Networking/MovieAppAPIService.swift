@@ -63,6 +63,26 @@ extension MovieAppAPIService: IMovieAPIService {
 			}
 		}
 	}
+
+	func getDetailMovies(id: Int, completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
+		let request = query.getDetailMovies(id: id)
+		client.request(request) { [weak self] result in
+			guard let self = self else { return }
+			switch result {
+			case .success(let data):
+				self.resourceHandler.getDetailMovies(data, completion: completion)
+			case .failure(let error):
+				guard let errorData = error.responseData else {
+					completion(.failure(error))
+					return
+				}
+				self.resourceHandler.handle(errorData: errorData) { serverError in
+					completion(.failure(serverError ?? error))
+				}
+			}
+		}
+	}
+
 	
 	func getDownloadMovies(completion: @escaping (Result<[IMovieModel], Error>) -> Void) {
 		let request = query.getDownloadMovies()

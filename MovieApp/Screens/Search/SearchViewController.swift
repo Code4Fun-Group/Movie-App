@@ -117,6 +117,7 @@ extension SearchViewController: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		coordinators?.detailViewController()
 		let change = DetailsViewController.fromStoryboard()
+//		change.detailData = searchViewModel?.searchMovieViewModels[indexPath.item]
 		navigationController?.pushViewController(change, animated: true)
 	}
 }

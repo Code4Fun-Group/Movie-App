@@ -197,6 +197,8 @@
 		CBEAB32E26FB9BAC00BD82C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2ED26FA1BBE00BD82C6 /* LaunchScreen.storyboard */; };
 		CBEAB32F26FB9BAC00BD82C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEAB2EB26FA1BBE00BD82C6 /* Assets.xcassets */; };
 		CEC32ABD7A3F87346F63CA8C /* Pods_MovieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B0BBC5A39C61B6C223A5C05 /* Pods_MovieAppUITests.framework */; };
+		F5087D6C273CB8280030B963 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5087D6B273CB8280030B963 /* DetailViewModel.swift */; };
+		F5087D6E273CB83C0030B963 /* HomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5087D6D273CB83C0030B963 /* HomeDetailViewModel.swift */; };
 		F535E8E6273A531B0084DE2C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8D7273A531B0084DE2C /* SearchViewModel.swift */; };
 		F535E8E7273A531B0084DE2C /* HomeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8D8273A531B0084DE2C /* HomeSearchViewModel.swift */; };
 		F535E8E8273A531B0084DE2C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535E8D9273A531B0084DE2C /* SearchViewController.swift */; };
@@ -325,6 +327,8 @@
 		D9FF1A9360F060FD864337BC /* Pods-MovieApp.qa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.qa.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.qa.xcconfig"; sourceTree = "<group>"; };
 		DA18DD29E9244E23374D34C4 /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDE7E02C9C8E0C54B99530B0 /* Pods-iOSBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSBase.debug.xcconfig"; path = "Target Support Files/Pods-iOSBase/Pods-iOSBase.debug.xcconfig"; sourceTree = "<group>"; };
+		F5087D6B273CB8280030B963 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		F5087D6D273CB83C0030B963 /* HomeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewModel.swift; sourceTree = "<group>"; };
 		F535E8D7273A531B0084DE2C /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F535E8D8273A531B0084DE2C /* HomeSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewModel.swift; sourceTree = "<group>"; };
 		F535E8D9273A531B0084DE2C /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -521,18 +525,13 @@
 		046BD7452730F0BB0089C5B0 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				046BD7462730F0BB0089C5B0 /* ViewModel */,
+				F5087D6A273CB8110030B963 /* ViewModel */,
+				F530AAAA273C10AA007FA26B /* View */,
+				F530AAA9273C10A1007FA26B /* Model */,
 				046BD7472730F0BB0089C5B0 /* DetailsViewController.storyboard */,
 				046BD7482730F0BB0089C5B0 /* DetailsViewController.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		046BD7462730F0BB0089C5B0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		046BD7492730F0BB0089C5B0 /* Tabbar */ = {
@@ -845,6 +844,29 @@
 				202F2320DC654268C24DD36B /* Pods-MovieAppUITests.production.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5087D6A273CB8110030B963 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5087D6B273CB8280030B963 /* DetailViewModel.swift */,
+				F5087D6D273CB83C0030B963 /* HomeDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F530AAA9273C10A1007FA26B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F530AAAA273C10AA007FA26B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F535E8D5273A531B0084DE2C /* Search */ = {
@@ -1283,6 +1305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5087D6E273CB83C0030B963 /* HomeDetailViewModel.swift in Sources */,
 				046BD7822730F0BB0089C5B0 /* HomeViewModel.swift in Sources */,
 				046BD81B2730F0BB0089C5B0 /* DownloadMovieViewModel.swift in Sources */,
 				042CF94F27108CC700275E9F /* MovieResponse.swift in Sources */,
@@ -1326,6 +1349,7 @@
 				046BD79A2730F0BB0089C5B0 /* ListItemCell.swift in Sources */,
 				04094453270EDA3900B4D136 /* CoordinatorProtocol.swift in Sources */,
 				046BD7F42730F0BB0089C5B0 /* ProfileItemCell.swift in Sources */,
+				F5087D6C273CB8280030B963 /* DetailViewModel.swift in Sources */,
 				046BD7AF2730F0BB0089C5B0 /* PreviewCell.swift in Sources */,
 				042CF7F727105E1800275E9F /* AppCoordinator.swift in Sources */,
 				046BD7D92730F0BB0089C5B0 /* MoreFileViewModel.swift in Sources */,
